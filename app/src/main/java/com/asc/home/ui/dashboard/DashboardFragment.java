@@ -28,6 +28,7 @@ public class DashboardFragment extends Fragment {
    RecyclerView mirecyclerView;
    MyAdapter dAdapter;
 TextView textView3;
+TextView textView7;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -39,21 +40,22 @@ TextView textView3;
             @Override
             public void onChanged(@Nullable String s) {
                 // textView.setText(s);
-                mirecyclerView = getView().findViewById(R.id.recyclerview5);
-                mirecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-                dAdapter= new MyAdapter(getContext(),getMyList());
-                mirecyclerView.setAdapter(dAdapter);
               textView3=getView().findViewById(R.id.textView3);
               textView3.setOnClickListener(new View.OnClickListener() {
                   @Override
                   public void onClick(View v) {
-                      
+                      mirecyclerView = getView().findViewById(R.id.recyclerview5);
+                      mirecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-
+                      dAdapter= new MyAdapter(getContext(),getMyList());
+                      mirecyclerView.setAdapter(dAdapter);
 
                   }
+
               });
+
+
 
 
             }
@@ -78,13 +80,15 @@ TextView textView3;
         m.setImg(R.drawable.logo);
         models.add(m);
 
-        m = new Model();
+       /* m = new Model();
         m.setTitle("data science");
         m.setCompanyname("wiztute");
         m.setStatus("completed");
         m.setDate("10 jan 2020");
         m.setImg(R.drawable.logo);
         models.add(m);
+
+        */
         return models;
     }
 }
