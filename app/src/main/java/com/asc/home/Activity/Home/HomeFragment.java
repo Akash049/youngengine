@@ -1,5 +1,6 @@
 package com.asc.home.Activity.Home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.asc.home.Activity.AtclickActivity;
 import com.asc.home.Model.Model;
 import com.asc.home.Adapter.MyAdapter;
 import com.asc.home.R;
@@ -28,7 +30,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
                 homeViewModel=ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        final View root = inflater.inflate(R.layout.fragment_home, container, false);
         //final TextView textView = root.findViewById(R.id.text_home);
         homeViewModel.getText().observe(this, new Observer<String>() {
             @Override
@@ -40,7 +42,12 @@ public class HomeFragment extends Fragment {
                 myAdapter= new MyAdapter(getContext(),getMyList());
                 mrecyclerView.setAdapter(myAdapter);
 
-
+                 root.findViewById(R.id.textView2) .setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(getActivity(), AtclickActivity.class));
+                    }
+                });
 
             }
         });
