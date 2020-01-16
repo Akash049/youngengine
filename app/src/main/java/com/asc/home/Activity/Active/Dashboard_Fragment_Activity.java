@@ -38,6 +38,11 @@ public class Dashboard_Fragment_Activity extends Fragment {
             @Override
             public void onChanged(@Nullable String s) {
                 // textView.setText(s);
+                mirecyclerView = getView().findViewById(R.id.recyclerview5);
+                mirecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+                dAdapter= new MyAdapter(getContext(),getMyList());
+                mirecyclerView.setAdapter(dAdapter);
 
               textView3=getView().findViewById(R.id.textView3);
               textView3.setOnClickListener(new View.OnClickListener() {
