@@ -1,66 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="70dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="3dp"
-    app:cardElevation="3dp"
-    app:cardUseCompatPadding="true"
+    app:cardElevation="0dp"
+    android:layout_marginBottom="15dp"
     >
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/img"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:src="@mipmap/ic_launcher"
-            />
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="13dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
 
         <TextView
             android:id="@+id/titler"
-            android:layout_width="wrap_content"
+            android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
             android:layout_toEndOf="@+id/img"
             android:layout_toRightOf="@+id/img"
             android:text="Title"
             android:textColor="#000"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textSize="15dp"
+             />
 
         <TextView
             android:id="@+id/companyname"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Company Name"
-            android:textSize="22sp"
-            android:textColor="#a9a9a9"
+            android:textSize="15dp"
+            android:textColor="#000"
             android:layout_toRightOf="@+id/img"
             android:layout_toEndOf="@+id/img"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
             android:layout_below="@+id/titler"
-            android:textStyle="bold"
-            />
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Date"
-            android:textSize="14sp"
-            android:textColor="#000"
-            android:layout_below="@+id/companyname"
-            android:layout_toRightOf="@+id/companyname"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="5dp"
             />
 
-          <TextView
+        <TextView
               android:id="@+id/status"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -70,10 +58,22 @@
               android:layout_toEndOf="@+id/img"
               android:layout_marginLeft="10dp"
               android:layout_marginStart="10dp"
-              android:layout_marginTop="5dp"
               android:layout_below="@+id/companyname"
+              android:textSize="10dp"
 
              />
+
+        <TextView
+            android:id="@+id/Coins"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/status"
+            android:layout_toEndOf="@+id/status"
+            android:layout_below="@+id/companyname"
+            android:text="Date"
+            android:textColor="#000"
+            android:textSize="10dp" />
 
 
     </RelativeLayout>

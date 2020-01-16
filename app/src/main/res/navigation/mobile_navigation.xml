@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.asc.home.ui.home.HomeFragment"
+        android:name="com.asc.home.Activity.Home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_Active"
-        android:name="com.asc.home.ui.dashboard.DashboardFragment"
+        android:name="com.asc.home.Activity.Active.Dashboard_Fragment_Activity"
         android:label="@string/title_Active"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_Learnings"
-        android:name="com.asc.home.ui.notifications.NotificationsFragment"
+        android:name="com.asc.home.Activity.Learnings.NotificationsFragment"
         android:label="@string/title_Learnings"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

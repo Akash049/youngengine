@@ -1,4 +1,4 @@
-package com.asc.home.ui.notifications;
+package com.asc.home.Activity.Learnings;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

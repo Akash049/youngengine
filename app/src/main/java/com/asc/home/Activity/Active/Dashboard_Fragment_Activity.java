@@ -1,12 +1,10 @@
-package com.asc.home.ui.dashboard;
+package com.asc.home.Activity.Active;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.VideoView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
@@ -16,19 +14,19 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.asc.home.Model;
+import com.asc.home.Model.Model;
 import com.asc.home.MyAdapter;
 import com.asc.home.R;
 
 import java.util.ArrayList;
 
-public class DashboardFragment extends Fragment {
+public class Dashboard_Fragment_Activity extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
    RecyclerView mirecyclerView;
    MyAdapter dAdapter;
-TextView textView3;
-TextView textView7;
+   TextView textView3;
+   TextView textView7;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -69,7 +67,7 @@ TextView textView7;
         m.setCompanyname("wiztute");
         m.setStatus("ongoing");
         m.setDate("15 jan 2020");
-        m.setImg(R.drawable.logo);
+        m.setImg(R.drawable.images);
         models.add(m);
 
         m = new Model();
@@ -77,7 +75,7 @@ TextView textView7;
         m.setCompanyname("wiztute");
         m.setStatus("ongoing");
         m.setDate("02 jan 2020");
-        m.setImg(R.drawable.logo);
+        m.setImg(R.drawable.images);
         models.add(m);
 
        /* m = new Model();

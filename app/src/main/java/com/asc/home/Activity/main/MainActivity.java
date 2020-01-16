@@ -1,9 +1,10 @@
-package com.asc.home;
+package com.asc.home.Activity.main;
 
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.VideoView;
 
+import com.asc.home.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 
