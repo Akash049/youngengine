@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.asc.home.Model.Model;
-import com.asc.home.MyAdapter;
+import com.asc.home.Adapter.MyAdapter;
 import com.asc.home.R;
 
 import java.util.ArrayList;
@@ -52,6 +52,18 @@ public class Dashboard_Fragment_Activity extends Fragment {
                   }
 
               });
+             textView7=getView().findViewById(R.id.textView7);
+             textView7.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View v) {
+                     mirecyclerView = getView().findViewById(R.id.recyclerview5);
+                     mirecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+                     dAdapter= new MyAdapter(getContext(),MyList());
+                     mirecyclerView.setAdapter(dAdapter);
+
+                 }
+             });
 
 
 
@@ -88,5 +100,19 @@ public class Dashboard_Fragment_Activity extends Fragment {
 
         */
         return models;
+    }
+
+
+    private ArrayList<Model> MyList() {
+        ArrayList<Model> models = new ArrayList<>();
+        Model m = new Model();
+        m.setTitle("data science");
+        m.setCompanyname("wiztute");
+        m.setStatus("completed");
+        m.setDate("10 jan 2020");
+        m.setImg(R.drawable.images);
+        models.add(m);
+        return models;
+
     }
 }

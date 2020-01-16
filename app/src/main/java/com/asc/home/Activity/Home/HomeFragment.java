@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.asc.home.Model.Model;
-import com.asc.home.MyAdapter;
+import com.asc.home.Adapter.MyAdapter;
 import com.asc.home.R;
 
 import java.util.ArrayList;
