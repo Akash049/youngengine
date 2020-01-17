@@ -37,6 +37,7 @@ public class MyAdapter extends RecyclerView.Adapter<Myholder>   {
         holder.mstatus.setText(models.get(position).getStatus());
         holder.mdate.setText(models.get(position).getDate());
         holder.mimg.setImageResource(models.get(position).getImg());
+        holder.onClick();
     }
 
     @Override

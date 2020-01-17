@@ -25,7 +25,7 @@ import java.util.ArrayList;
 //import technolifestyle.com.imageslider.FlipperLayout;
 //import technolifestyle.com.imageslider.FlipperView;
 
-public class HomeFragment extends Fragment {
+public class Home_Fragment_Activity extends Fragment {
     private HomeViewModel homeViewModel;
     //VideoView videoview;
     RecyclerView mrecyclerView;

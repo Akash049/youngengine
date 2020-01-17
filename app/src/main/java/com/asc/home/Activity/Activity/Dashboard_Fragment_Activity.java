@@ -93,7 +93,7 @@ public class Dashboard_Fragment_Activity extends Fragment {
     private ArrayList<Model> getMyList() {
         ArrayList<Model> models = new ArrayList<>();
         Model m = new Model();
-        m.setTitle("python");
+        m.setTitle("Python");
         m.setCompanyname("wiztute");
         m.setStatus("ongoing");
         m.setDate("15 jan 2020");
@@ -101,7 +101,7 @@ public class Dashboard_Fragment_Activity extends Fragment {
         models.add(m);
 
         m = new Model();
-        m.setTitle("android");
+        m.setTitle("Android");
         m.setCompanyname("wiztute");
         m.setStatus("ongoing");
         m.setDate("02 jan 2020");
@@ -124,7 +124,7 @@ public class Dashboard_Fragment_Activity extends Fragment {
     private ArrayList<Model> MyList() {
         ArrayList<Model> models = new ArrayList<>();
         Model m = new Model();
-        m.setTitle("data science");
+        m.setTitle("Data science");
         m.setCompanyname("wiztute");
         m.setStatus("completed");
         m.setDate("10 jan 2020");

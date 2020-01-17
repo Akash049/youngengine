@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.asc.home.R;
 
-public class NotificationsFragment extends Fragment {
+public class Learnings_Fragment_Activity extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;
 
