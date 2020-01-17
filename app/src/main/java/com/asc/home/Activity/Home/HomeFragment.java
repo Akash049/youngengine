@@ -22,8 +22,8 @@ import com.asc.home.R;
 
 import java.util.ArrayList;
 
-import technolifestyle.com.imageslider.FlipperLayout;
-import technolifestyle.com.imageslider.FlipperView;
+//import technolifestyle.com.imageslider.FlipperLayout;
+//import technolifestyle.com.imageslider.FlipperView;
 
 public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
