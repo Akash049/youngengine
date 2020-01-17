@@ -1,4 +1,4 @@
-package com.asc.home.Activity.Active;
+package com.asc.home.Activity.Activity;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -23,17 +23,23 @@ import java.util.ArrayList;
 public class Dashboard_Fragment_Activity extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
-   RecyclerView mirecyclerView;
-   MyAdapter dAdapter;
-   TextView textView3;
-   TextView textView7;
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+    RecyclerView mirecyclerView;
+    MyAdapter dAdapter;
+    TextView ongoingTextView;
+    TextView completedTextView;
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel.class);
+        dashboardViewModel = ViewModelProviders.of(this).get(DashboardViewModel.class);
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        //final TextView textView = root.findViewById(R.id.Active);
+
+        //Initialization at one place
+        ongoingTextView = root.findViewById(R.id.textView3);
+        completedTextView = root.findViewById(R.id.textView7);
+
+        // On the start of app, by default ongoing has to be selected
+        ongoingTextView.setTextColor(getResources().getColor(R.color.colorPrimary));
+        completedTextView.setTextColor(getResources().getColor(R.color.unselected_grey));
+
         dashboardViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
@@ -44,8 +50,8 @@ public class Dashboard_Fragment_Activity extends Fragment {
                 dAdapter= new MyAdapter(getContext(),getMyList());
                 mirecyclerView.setAdapter(dAdapter);
 
-              textView3=getView().findViewById(R.id.textView3);
-              textView3.setOnClickListener(new View.OnClickListener() {
+
+              ongoingTextView.setOnClickListener(new View.OnClickListener() {
                   @Override
                   public void onClick(View v) {
                       mirecyclerView = getView().findViewById(R.id.recyclerview5);
@@ -54,11 +60,14 @@ public class Dashboard_Fragment_Activity extends Fragment {
                       dAdapter= new MyAdapter(getContext(),getMyList());
                       mirecyclerView.setAdapter(dAdapter);
 
+                      //On clicking ongoing make it blue
+                      ongoingTextView.setTextColor(getResources().getColor(R.color.colorPrimary));
+                      completedTextView.setTextColor(getResources().getColor(R.color.unselected_grey));
                   }
 
               });
-             textView7=getView().findViewById(R.id.textView7);
-             textView7.setOnClickListener(new View.OnClickListener() {
+
+             completedTextView.setOnClickListener(new View.OnClickListener() {
                  @Override
                  public void onClick(View v) {
                      mirecyclerView = getView().findViewById(R.id.recyclerview5);
@@ -66,6 +75,10 @@ public class Dashboard_Fragment_Activity extends Fragment {
 
                      dAdapter= new MyAdapter(getContext(),MyList());
                      mirecyclerView.setAdapter(dAdapter);
+
+                     //On clicking ongoing make it blue
+                     completedTextView.setTextColor(getResources().getColor(R.color.colorPrimary));
+                     ongoingTextView.setTextColor(getResources().getColor(R.color.unselected_grey));
 
                  }
              });

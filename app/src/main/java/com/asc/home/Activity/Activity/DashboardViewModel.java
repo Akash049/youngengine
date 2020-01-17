@@ -1,4 +1,4 @@
-package com.asc.home.Activity.Active;
+package com.asc.home.Activity.Activity;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
@@ -21,17 +22,19 @@ import com.asc.home.R;
 
 import java.util.ArrayList;
 
+import technolifestyle.com.imageslider.FlipperLayout;
+import technolifestyle.com.imageslider.FlipperView;
+
 public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
     //VideoView videoview;
     RecyclerView mrecyclerView;
     MyAdapter myAdapter;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-                homeViewModel=ViewModelProviders.of(this).get(HomeViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        homeViewModel=ViewModelProviders.of(this).get(HomeViewModel.class);
         final View root = inflater.inflate(R.layout.fragment_home, container, false);
-        //final TextView textView = root.findViewById(R.id.text_home);
+
         homeViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
@@ -51,6 +54,35 @@ public class HomeFragment extends Fragment {
 
             }
         });
+
+//        FlipperLayout flipperLayout = (FlipperLayout) root.findViewById(R.id.flipper_layout);
+//        int num_of_pages = 3;
+//        for (int i = 0; i < num_of_pages; i++) {
+//            FlipperView view = new FlipperView(getContext());
+//            view.setImageScaleType(ImageView.ScaleType.CENTER_CROP) // You can use any ScaleType
+//                    .setDescription("Description") // Add custom description for your image in the flipper view
+//                    .setImage(R.mipmap.ic_launcher, new Function2<ImageView, Object, Unit>() {
+//                        @Override
+//                        public Unit invoke(ImageView imageView, Object image) {
+//                            // As per the user discretion as to how they want to load the URL
+//                            /* E.g since an image of Drawable type is sent as a param in setImage method, The Object
+//                             * image will be of type Drawable
+//                             * imageView.setImageDrawable((Drawable)image);
+//                             */
+//                            return Unit.INSTANCE;
+//                        }
+//                    })
+//                    .setOnFlipperClickListener(new FlipperView.OnFlipperClickListener() {
+//                        @Override
+//                        public void onFlipperClick(FlipperView flipperView) {
+//                            // Handle View Click here
+//                        }
+//                    });
+//            flipperLayout.setScrollTimeInSec(5); //setting up scroll time, by default it's 3 seconds
+//            flipperLayout.getScrollTimeInSec(); //returns the scroll time in sec
+//            flipperLayout.getCurrentPagePosition(); //returns the current position of pager
+//            flipperLayout.addFlipperView(view);
+//        }
 
         return root;
     }

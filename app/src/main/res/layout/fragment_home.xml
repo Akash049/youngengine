@@ -5,43 +5,46 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="10"
-    >
+    android:background="#ffffff"
+    android:weightSum="10">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="105dp"
-        android:layout_weight="0" />
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_box"
+        android:layout_weight="3">
+
+<!--        <technolifestyle.com.imageslider.FlipperLayout-->
+<!--            xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--            xmlns:tools="http://schemas.android.com/tools"-->
+<!--            android:id="@+id/flipper_layout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="200dp"/>-->
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="92dp"
-        android:layout_height="25dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginLeft="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:text="Missions"
-        android:textColor="#F7020202"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.059"
-        app:layout_constraintStart_toStartOf="parent"
-
-        />
+        android:paddingLeft="22dp"
+        android:textColor="#607D8B"
+        android:textSize="18dp"></TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView3"
-        android:layout_width="350dp"
-        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_gravity="center"
-        android:layout_weight="8"
+        android:layout_weight="7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.593"
-
-        />
+        app:layout_constraintVertical_bias="0.593"/>
 
 </LinearLayout>
