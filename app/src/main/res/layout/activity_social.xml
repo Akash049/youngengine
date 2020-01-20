@@ -8,11 +8,13 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="Last 7 days leaderboard"
+        android:text="Last seven days leaderboard"
+        android:textColor="#000"
         android:gravity="center"
         android:textSize="20dp"
+        android:paddingTop="5dp"
         >
-        
+
     </TextView>
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,25 +22,33 @@
         android:layout_weight="4"
         android:orientation="horizontal"
         >
-         <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:background="@drawable/rounded_box"
-        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_weight="2"
+            android:background="@drawable/rounded_box"
+            >
 
-        <!--        <technolifestyle.com.imageslider.FlipperLayout-->
-        <!--            xmlns:android="http://schemas.android.com/apk/res/android"-->
-        <!--            xmlns:tools="http://schemas.android.com/tools"-->
-        <!--            android:id="@+id/flipper_layout"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="200dp"/>-->
+            <!--        <technolifestyle.com.imageslider.FlipperLayout-->
+            <!--            xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--            xmlns:tools="http://schemas.android.com/tools"-->
+            <!--            android:id="@+id/flipper_layout"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="200dp"/>-->
 
-    </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:background="@drawable/rounded_box"
             >
 
@@ -56,35 +66,43 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="8"
+        android:id="@+id/recyclerView10"
         ></androidx.recyclerview.widget.RecyclerView>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:textSize="20dp"
+        android:textSize="18dp"
         android:text="Invite and Earn"
+        android:textColor="#000"
         android:gravity="center"></TextView>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:textSize="20dp"
+        android:textSize="18dp"
         android:layout_weight="1"
         android:text="Refer a friend and earn 500 coins each"
-        android:paddingLeft="20dp"
+        android:paddingLeft="35dp"
+        android:textColor="#000"
+        android:layout_marginTop="2dp"
         ></TextView>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="Your referral code : wafasfa"
-        android:textSize="20dp"
-        android:paddingLeft="20dp"></TextView>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:layout_gravity="center"
-            android:text="Share Code"></Button>
+        android:textSize="18dp"
+        android:paddingLeft="70dp"
+        android:textColor="#000"
+        ></TextView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:onClick="buclick"
+        android:text="Share Code"></Button>
 
 </LinearLayout>
