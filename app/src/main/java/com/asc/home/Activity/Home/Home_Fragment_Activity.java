@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.asc.home.Activity.Activity.Social;
 import com.asc.home.Activity.Mission;
+import com.asc.home.Activity.Profile;
 import com.asc.home.Model.Model;
 import com.asc.home.Adapter.MyAdapter;
 import com.asc.home.R;
