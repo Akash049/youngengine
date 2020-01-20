@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
@@ -15,10 +14,12 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.asc.home.Activity.AtclickActivity;
+import com.asc.home.Activity.Mission;
+import com.asc.home.Activity.Social;
 import com.asc.home.Model.Model;
 import com.asc.home.Adapter.MyAdapter;
 import com.asc.home.R;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
@@ -38,19 +39,28 @@ public class Home_Fragment_Activity extends Fragment {
         homeViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-               // textView.setText(s);
-                mrecyclerView = getView().findViewById(R.id.recyclerView3);
-                mrecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+               // textView.setText(s);;
+                 mrecyclerView=getView().findViewById(R.id.recyclerView3);
+                 mrecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
                 myAdapter= new MyAdapter(getContext(),getMyList());
-                mrecyclerView.setAdapter(myAdapter);
+                    mrecyclerView.setAdapter(myAdapter);
 
                  root.findViewById(R.id.textView2) .setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        startActivity(new Intent(getActivity(), AtclickActivity.class));
+                        startActivity(new Intent(getActivity(), Mission.class));
                     }
+
+
                 });
+                /* root.findViewById(R.id.nav_Social).setOnClickListener(new View.OnClickListener() {
+                     @Override
+                     public void onClick(View v) {
+                         startActivity(new Intent(getActivity(), Social.class));
+                     }
+                 });*/
+
 
             }
         });

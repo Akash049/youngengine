@@ -10,14 +10,14 @@ import android.widget.TextView;
 
 import com.asc.home.R;
 
-public class AtclickActivity extends AppCompatActivity {
+public class Mission extends AppCompatActivity {
     TextView textView;
     String [] spinnerlist={"india","australia","england","pakistan"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_atclick);
+        setContentView(R.layout.mission);
         ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,spinnerlist);
         ActionBar actionBar=getSupportActionBar();
         Spinner counspinner=(Spinner)findViewById(R.id.description);
