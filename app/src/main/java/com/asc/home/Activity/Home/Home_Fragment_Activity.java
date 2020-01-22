@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.asc.home.Activity.Mission.Mission;
 import com.asc.home.Activity.Profile.Profile;
 import com.asc.home.Activity.Social.Social;
+import com.asc.home.Activity.Wallet;
 import com.asc.home.Model.Model;
 import com.asc.home.Adapter.MyAdapter;
 import com.asc.home.R;
@@ -72,7 +73,7 @@ public class Home_Fragment_Activity extends Fragment implements NavigationView.O
                 root.findViewById(R.id.textView2).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        startActivity(new Intent(getActivity(), Mission.class));
+                        startActivity(new Intent(getActivity(), Wallet.class));
                     }
 
 
