@@ -1,5 +1,6 @@
 package com.asc.home.Activity.Social;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,6 +21,8 @@ public class Social extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_social);
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setTitle("Social");
         mrecyclerView=findViewById(R.id.recyclerView10);
         mrecyclerView.setLayoutManager(new LinearLayoutManager(this));
 

@@ -23,6 +23,7 @@ public class Mission extends AppCompatActivity {
         ActionBar actionBar=getSupportActionBar();
         Spinner counspinner=(Spinner)findViewById(R.id.description);
         counspinner.setAdapter(arrayAdapter);
+        actionBar.setTitle("Mission");
         //actionBar.setTitle(mtitle);
     }
 }
