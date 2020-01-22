@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_Active"
-        android:name="com.asc.home.Activity.Activity.Dashboard_Fragment_Activity"
+        android:name="com.asc.home.Activity.Active.Active_Activity"
         android:label="@string/title_Active"
         tools:layout="@layout/fragment_dashboard" />
 

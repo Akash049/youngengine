@@ -3,6 +3,7 @@ package com.asc.home.Activity.Home;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -14,19 +15,19 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.asc.home.Activity.Activity.Social;
-import com.asc.home.Activity.Mission;
-import com.asc.home.Activity.Profile;
+import com.asc.home.Activity.Profile.Profile;
+import com.asc.home.Activity.Social.Social;
 import com.asc.home.Model.Model;
 import com.asc.home.Adapter.MyAdapter;
 import com.asc.home.R;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
 //import technolifestyle.com.imageslider.FlipperLayout;
 //import technolifestyle.com.imageslider.FlipperView;
 
-public class Home_Fragment_Activity extends Fragment {
+public class Home_Fragment_Activity extends Fragment implements NavigationView.OnNavigationItemSelectedListener {
     private HomeViewModel homeViewModel;
     //VideoView videoview;
     RecyclerView mrecyclerView;
@@ -39,14 +40,35 @@ public class Home_Fragment_Activity extends Fragment {
         homeViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-               // textView.setText(s);;
-                 mrecyclerView=getView().findViewById(R.id.recyclerView3);
-                 mrecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                // textView.setText(s);;
+                mrecyclerView=getView().findViewById(R.id.recyclerView3);
+                mrecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                NavigationView navigationView=getView().findViewById(R.id.nav_view);
+                navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                        switch(item.getItemId())
+                        {
+                            case  R.id.nav_Profile:
+                                Intent intent=new Intent(getActivity(), Profile.class);
+                                getActivity().startActivity(intent);
+                                break;
+                            case R.id.nav_Social:
+                                Intent intent1=new Intent(getActivity(), Social.class);
+                                getActivity().startActivity(intent1);
+                                break;
+
+                        }
+
+                        return true;
+                    }
+                });
 
                 myAdapter= new MyAdapter(getContext(),getMyList());
-                    mrecyclerView.setAdapter(myAdapter);
+                mrecyclerView.setAdapter(myAdapter);
 
-                 root.findViewById(R.id.textView2) .setOnClickListener(new View.OnClickListener() {
+                root.findViewById(R.id.textView2).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         startActivity(new Intent(getActivity(), Social.class));
@@ -153,7 +175,20 @@ public class Home_Fragment_Activity extends Fragment {
         m.setDate("10 jan 2020");
         m.setImg(R.drawable.images);
         models.add(m);
-      return models;
+        return models;
     }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        switch(item.getItemId())
+        {
+            case 0 :
+               Intent intent=new Intent(getActivity(), Profile.class);
+               getActivity().startActivity(intent);
+                break;
+        }
+
+        return true;
+    }
 }

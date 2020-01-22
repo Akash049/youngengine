@@ -1,4 +1,4 @@
-package com.asc.home.Activity.Activity;
+package com.asc.home.Activity.Active;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -20,7 +20,7 @@ import com.asc.home.R;
 
 import java.util.ArrayList;
 
-public class Dashboard_Fragment_Activity extends Fragment {
+public class Active_Activity extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
     RecyclerView mirecyclerView;

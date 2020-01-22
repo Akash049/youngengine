@@ -11,8 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.Profile"></activity>
-        <activity android:name=".Activity.Activity.Social" />
+        <activity android:name=".Activity.Profile.Profile"></activity>
+        <activity android:name=".Activity.Social.Social" />
         <activity
             android:name=".Activity.main.MainActivity"
             android:label="@string/app_name"
@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.Mission"
+            android:name=".Activity.Mission.Mission"
             android:label="@string/app_name" />
     </application>
 

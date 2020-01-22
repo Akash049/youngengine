@@ -1,4 +1,4 @@
-package com.asc.home.Activity.Activity;
+package com.asc.home.Activity.Social;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
