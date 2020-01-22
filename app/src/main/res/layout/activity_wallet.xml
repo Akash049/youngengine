@@ -78,6 +78,42 @@
             android:layout_marginTop="20dp"
             android:background="?android:attr/listDivider" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="70dp"
+            android:text="Rs 0"
+            android:textColor="#000"
+            android:textSize="10dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="53dp"
+            android:text="PENDING"
+            android:textColor="#000"
+            android:textSize="12dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="52dp"
+            android:text="AMOUNT"
+            android:textColor="#000"
+            android:textSize="12dp"
+
+            />
+
         <Button
             android:id="@+id/Redeem"
             android:layout_width="wrap_content"
