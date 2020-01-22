@@ -16,11 +16,13 @@ public class Mission extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mission);
         ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,spinnerlist);
         ActionBar actionBar=getSupportActionBar();
         Spinner counspinner=(Spinner)findViewById(R.id.description);
         counspinner.setAdapter(arrayAdapter);
+        //actionBar.setTitle(mtitle);
     }
 }

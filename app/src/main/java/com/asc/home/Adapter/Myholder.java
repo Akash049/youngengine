@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.asc.home.Itemclicklistener;
 import com.asc.home.R;
 
-public class Myholder extends RecyclerView.ViewHolder implements View.OnClickListener{
+public class    Myholder extends RecyclerView.ViewHolder implements View.OnClickListener{
 ImageView mimg;
 TextView mtitle,mcompanyname,mstatus,mdate;
 Itemclicklistener itemclicklistener;
@@ -27,12 +27,12 @@ Itemclicklistener itemclicklistener;
 
     @Override
     public void onClick(View v) {
-
+        this.itemclicklistener.onitemclickListener(v,getLayoutPosition());
     }
-    //public void setItemclicklistener(Itemclicklistener ic)
-    //{
-     //   this.itemclicklistener=ic;
-    //}
+    public void setItemclicklistener(Itemclicklistener ic)
+    {
+        this.itemclicklistener=ic;
+    }
 
 //    public void onClick() {
   //      Intent intent=new Intent(,Mission.class);

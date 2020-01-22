@@ -1,6 +1,7 @@
 package com.asc.home.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.asc.home.Activity.Mission.Mission;
+import com.asc.home.Itemclicklistener;
 import com.asc.home.Model.Model;
 import com.asc.home.R;
 
@@ -37,6 +40,13 @@ public class MyAdapter extends RecyclerView.Adapter<Myholder>   {
         holder.mstatus.setText(models.get(position).getStatus());
         holder.mdate.setText(models.get(position).getDate());
         holder.mimg.setImageResource(models.get(position).getImg());
+        holder.setItemclicklistener(new Itemclicklistener() {
+            @Override
+            public void onitemclickListener(View v, int position) {
+                Intent intent=new Intent(c, Mission.class);
+                c.startActivity(intent);
+            }
+        });
     }
 
     @Override
