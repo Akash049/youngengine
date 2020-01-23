@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:weightSum="5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_centerVertical="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:id="@+id/nav_head"
+        android:weightSum="4"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_marginTop="15dp"
+            android:layout_width="@dimen/profile_width"
+            android:layout_height="@dimen/profile_height"
+            android:visibility="visible"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:src="@drawable/user_acc"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:paddingTop="6dp"
+            android:paddingLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/level"
+                android:text=""
+                android:textSize="16dp"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:id="@+id/nav_val"
+        android:weightSum="5">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageViewIcon"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/ic_help_black_24dp"
+                android:scaleType="fitXY"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="15dp"
+                android:gravity="center_vertical|start"
+                android:layout_centerVertical="true"
+                android:paddingLeft="16dp"
+                android:textColor="@color/dark_gray"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginTop="-1.5dp"
+                android:background="@color/light_gray"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

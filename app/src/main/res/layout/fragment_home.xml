@@ -4,66 +4,74 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
+
      <LinearLayout
          android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ffffff"
-    android:weightSum="10">
-
-    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/rounded_box"
-        android:layout_weight="3">
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:weightSum="10">
 
-<!--        <technolifestyle.com.imageslider.FlipperLayout-->
-<!--            xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--            xmlns:tools="http://schemas.android.com/tools"-->
-<!--            android:id="@+id/flipper_layout"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="200dp"/>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:background="@drawable/rounded_box"
+            android:layout_weight="3">
 
-    </LinearLayout>
+            <androidx.viewpager.widget.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/image_slider"/>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:text="Missions"
-        android:paddingLeft="22dp"
-        android:textColor="#607D8B"
-        android:textSize="18dp"></TextView>
+        </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView3"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_weight="7"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.593"/>
 
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:orientation="horizontal"
+             android:gravity="center_vertical"
+             android:paddingLeft="20dp"
+             android:layout_weight="0.5">
+
+             <ImageView
+                 android:layout_width="20dp"
+                 android:layout_height="20dp"
+                 android:src="@drawable/speaker">
+
+             </ImageView>
+
+             <TextView
+                 android:id="@+id/textView2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:text="Missions"
+                 android:gravity="center_vertical"
+                 android:paddingLeft="20dp"
+                 android:textColor="@color/dark_gray"
+                 android:textSize="18dp"/>
+
+         </LinearLayout>
+
+        <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:layout_margin="10dp"
+             android:orientation="vertical"
+             android:layout_weight="7">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
 
 
 
 </LinearLayout>
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:menu="@menu/side_menu_nav"
-        android:id="@+id/nav_view"
-        >
-
-    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

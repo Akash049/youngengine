@@ -9,15 +9,18 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Activity.Wallet"></activity>
-        <activity android:name=".Activity.Profile.Profile" />
-        <activity android:name=".Activity.Social.Social" />
+        android:supportsRtl="true">
         <activity
-            android:name=".Activity.main.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:name=".Activity.Wallet"></activity>
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".Activity.Profile" />
+        <activity android:name=".Activity.Social" />
+        <activity
+            android:name=".Activity.Main"
+            android:theme="@style/NoActionBar"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +28,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.Mission.Mission"
+            android:theme="@style/AppTheme"
+            android:name=".Activity.Mission"
             android:label="@string/app_name" />
     </application>
 

@@ -35,4 +35,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation 'com.github.therealshabi:AutoImageFlipper:1.6.0'
     implementation files('libs\\YouTubeAndroidPlayerApi.jar')
+
+    implementation 'com.mikhaellopez:circularimageview:4.1.1'
 }
