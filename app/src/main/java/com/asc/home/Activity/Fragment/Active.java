@@ -13,8 +13,10 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import com.asc.home.Activity.ViewModels.DashboardViewModel;
+import com.asc.home.Adapter.SliderImageAdapter;
 import com.asc.home.Model.EventModel;
 import com.asc.home.Adapter.EventListAdapter;
 import com.asc.home.R;
@@ -28,7 +30,10 @@ public class Active extends Fragment {
     EventListAdapter dAdapter;
     TextView ongoingTextView;
     TextView completedTextView;
+    private SliderImageAdapter sliderImageAdapter;
+    private ViewPager imageSlider;
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
 
         dashboardViewModel = ViewModelProviders.of(this).get(DashboardViewModel.class);
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
@@ -45,6 +50,9 @@ public class Active extends Fragment {
             @Override
             public void onChanged(@Nullable String s) {
                 // textView.setText(s);
+                imageSlider = (ViewPager) getView().findViewById(R.id.image_slider);
+                sliderImageAdapter = new SliderImageAdapter(getContext());
+                imageSlider.setAdapter(sliderImageAdapter);
                 mirecyclerView = getView().findViewById(R.id.recyclerview5);
                 mirecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 

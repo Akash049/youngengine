@@ -26,8 +26,8 @@ public class Social extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_social);
-        ActionBar actionBar=getSupportActionBar();
-        actionBar.setTitle("Social");                            //Title of the activity
+       // ActionBar actionBar=getSupportActionBar();
+       // actionBar.setTitle("Social");                            //Title of the activity
         mrecyclerView=findViewById(R.id.recyclerView10);          //Initialisation of the recycler view
         mrecyclerView.setLayoutManager(new LinearLayoutManager(this));
 

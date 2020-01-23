@@ -3,7 +3,6 @@
     package="com.asc.home">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,9 +13,11 @@
             android:theme="@style/AppTheme"
             android:name=".Activity.Wallet"></activity>
         <activity
-            android:theme="@style/AppTheme"
+            android:theme="@style/NoActionBar"
             android:name=".Activity.Profile" />
-        <activity android:name=".Activity.Social" />
+        <activity android:name=".Activity.Social"
+            android:theme="@style/NoActionBar"
+            />
         <activity
             android:name=".Activity.Main"
             android:theme="@style/NoActionBar"

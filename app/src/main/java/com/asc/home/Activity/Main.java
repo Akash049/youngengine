@@ -98,7 +98,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
                 break;
             case 2:
                 mDrawerLayout.closeDrawers();
-                startActivity(new Intent(Main.this, Profile.class));
+                startActivity(new Intent(Main.this, Social.class));
                 break;
             case 3:
                 mDrawerLayout.closeDrawers();
