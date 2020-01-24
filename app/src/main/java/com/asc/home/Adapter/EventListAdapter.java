@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.asc.home.Activity.Mission;
+import com.asc.home.Activity.Mission.Mission;
 import com.asc.home.Interface.Itemclicklistener;
 import com.asc.home.Model.EventModel;
 import com.asc.home.R;

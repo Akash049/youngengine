@@ -1,4 +1,4 @@
-package com.asc.home.Activity;
+package com.asc.home.Activity.Main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.asc.home.Activity.Profile.Profile;
+import com.asc.home.Activity.Social.Social;
+import com.asc.home.Activity.Wallet.Wallet;
 import com.asc.home.Adapter.DrawerListItemAdapter;
 import com.asc.home.Model.NavDataModel;
 import com.asc.home.R;

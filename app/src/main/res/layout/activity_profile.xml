@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.Profile">
+    tools:context=".Activity.Profile.Profile">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -82,17 +82,18 @@
         app:layout_constraintVertical_bias="0.09" />
 
     <LinearLayout
-        android:paddingTop="15dp"
         android:id="@+id/imageView"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="7dp"
+        android:paddingTop="15dp"
         android:src="@drawable/profile_photo"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.101">
+        app:layout_constraintVertical_bias="0.114">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -105,11 +106,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
+        android:fontFamily="@font/montserrat"
         android:text="01/08/1997"
         android:textColor="#000"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.822" />
@@ -120,41 +122,43 @@
         android:layout_height="19dp"
         android:layout_marginTop="75dp"
         android:layout_marginBottom="10dp"
+        android:fontFamily="@font/montserrat"
         android:text="Ajay"
         android:textColor="#000"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.224"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="110dp"
+        android:fontFamily="@font/montserrat"
         android:text="+91-9874567891"
         android:textColor="#000"
         app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.709" />
+        app:layout_constraintVertical_bias="0.741" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ajay_sharma@gmail.com"
+        android:fontFamily="@font/montserrat"
+        android:text="adwitiya_sharma@gmail.com"
         android:textColor="#000"
         app:layout_constraintBottom_toTopOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintHorizontal_bias="0.408"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.743" />
+        app:layout_constraintVertical_bias="0.745" />
 
     <TextView
         android:id="@+id/textView9"

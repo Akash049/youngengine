@@ -1,8 +1,6 @@
-package com.asc.home.Activity;
+package com.asc.home.Activity.Social;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,7 +11,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.asc.home.Activity.Fragment.Home;
+import com.asc.home.Activity.Main.Main;
+import com.asc.home.Activity.Wallet.Wallet;
 import com.asc.home.Adapter.EventListAdapter;
 import com.asc.home.Model.EventModel;
 import com.asc.home.R;

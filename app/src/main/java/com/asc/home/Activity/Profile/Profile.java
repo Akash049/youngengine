@@ -1,6 +1,5 @@
-package com.asc.home.Activity;
+package com.asc.home.Activity.Profile;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,6 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.asc.home.Activity.Main.Main;
+import com.asc.home.Activity.Wallet.Wallet;
 import com.asc.home.R;
 
 public class Profile extends AppCompatActivity implements View.OnClickListener {
