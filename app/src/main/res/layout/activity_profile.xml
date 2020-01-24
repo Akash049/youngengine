@@ -69,8 +69,8 @@
     <ProgressBar
         android:id="@+id/progressBar"
         style="@style/MyProgressBar"
-        android:layout_width="278dp"
-        android:layout_height="33dp"
+        android:layout_width="225dp"
+        android:layout_height="93dp"
         android:backgroundTint="#ffff"
         android:progress="50"
         android:progressTint="#00C4CC"
@@ -191,7 +191,7 @@
     <ImageView
         android:layout_width="94dp"
         android:layout_height="58dp"
-        android:src="@drawable/ic_face_black_24dp"
+        android:src="@drawable/gladiator"
         app:layout_constraintBottom_toTopOf="@+id/textView9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

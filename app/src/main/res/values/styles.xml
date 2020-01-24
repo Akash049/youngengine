@@ -13,13 +13,12 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
     <style name="MyProgressBar" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
-        <item name="android:minWidth">200dp</item>
-        <item name="colorControlActivated">#00C4CC</item>
-        <item name="colorButtonNormal">#00C4CC</item>
-        <item name="colorControlHighlight">#00C4CC</item>
+    <item name="colorButtonNormal">#f50057</item>
+    <item name="colorControlActivated">#33691e</item>
+    <item name="colorControlHighlight">#ff6d00</item>
         <item name="android:progress">@drawable/progress_bar</item>
+</style>
 
-    </style>
+
 </resources>
