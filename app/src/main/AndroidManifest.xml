@@ -19,7 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login_Page" />
+        <activity android:name=".Login_Page"
+            android:theme="@style/NoActionBar"
+            />
+
         <activity android:name=".Activity.font_try" />
         <activity
             android:name=".Activity.Wallet.Wallet"

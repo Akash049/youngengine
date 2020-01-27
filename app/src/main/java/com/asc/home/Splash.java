@@ -26,12 +26,12 @@ private int slp=3;
         public void run()
         {
             try {
-                sleep(1000*slp);
+                sleep(100*slp);
             }catch (InterruptedException e){
                 e.printStackTrace();
             }
 
-            Intent intent = new Intent(Splash.this, Main.class);
+            Intent intent = new Intent(Splash.this, Login_Page.class);
             startActivity(intent);
             Splash.this.finish();
 
