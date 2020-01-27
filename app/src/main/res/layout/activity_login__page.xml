@@ -69,37 +69,18 @@
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="264dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="184dp"
-        android:backgroundTint="#3F51B5"
-        android:drawableStart="@mipmap/fb_launcher"
-        android:duplicateParentState="false"
-        android:editable="false"
-        android:text="Sign in with Facebook"
-        android:textColor="#FCF7F6"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.894" />
-
-    <Button
         android:id="@+id/button3"
         android:layout_width="264dp"
         android:layout_height="58dp"
+        android:layout_marginBottom="232dp"
         android:backgroundTint="#2196F3"
         android:drawableStart="@mipmap/twitter_launcher"
         android:text="Sign in with twitter"
         android:textColor="#FCF7F6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.087" />
+        app:layout_constraintHorizontal_bias="0.401"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -128,4 +109,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3"
         app:layout_constraintVertical_bias="0.467" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/fb_login"
+        android:layout_width="236dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

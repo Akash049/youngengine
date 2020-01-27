@@ -14,19 +14,48 @@ import com.asc.home.Activity.Main.Main;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
+
 public class Login_Page extends AppCompatActivity {
     Button button;
     EditText email;
+    LoginButton loginButton;
+    CallbackManager callbackManager;
 EditText password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_login__page);
 
         button=findViewById(R.id.button2);
         email=findViewById(R.id.email);
         password=findViewById(R.id.password);
+       loginButton=findViewById(R.id.fb_login);
+       callbackManager=CallbackManager.Factory.create();
+       loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+           @Override
+           public void onSuccess(LoginResult loginResult) {
+                 Intent intent = new Intent(Login_Page.this,Main.class);
+                 startActivity(intent);
+           }
 
+           @Override
+           public void onCancel() {
+
+           }
+
+           @Override
+           public void onError(FacebookException error) {
+
+           }
+       });
     }
 
     public void buclick(View view) {
