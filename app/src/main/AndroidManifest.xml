@@ -10,7 +10,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
-        <activity android:name=".Activity.font_try"></activity>
+        <activity android:name=".Splash"
+            android:theme="@style/NoActionBar"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Login_Page" />
+        <activity android:name=".Activity.font_try" />
         <activity
             android:name=".Activity.Wallet.Wallet"
             android:theme="@style/AppTheme" />
@@ -24,11 +34,7 @@
             android:name=".Activity.Main.Main"
             android:label="@string/app_name"
             android:theme="@style/NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Activity.Mission.Mission"
