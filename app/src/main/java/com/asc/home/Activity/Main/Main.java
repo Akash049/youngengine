@@ -8,14 +8,21 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.asc.home.Activity.Login.Login_Page;
 import com.asc.home.Activity.Profile.Profile;
 import com.asc.home.Activity.Social.Social;
 import com.asc.home.Activity.Wallet.Wallet;
 import com.asc.home.Adapter.DrawerListItemAdapter;
 import com.asc.home.Model.NavDataModel;
 import com.asc.home.R;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -40,6 +47,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
 
     //Temp variable not in use
     private Toolbar toolbar;
+    GoogleSignInClient mGoogleSignInClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +63,10 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 //        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
     }
 
     public void initialize(){
@@ -64,7 +76,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
         hamIcon.setOnClickListener(this);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
-        NavDataModel[] drawerItem = new NavDataModel[4];
+        NavDataModel[] drawerItem = new NavDataModel[5];
 
         //First set the header details for the view
         navDataModel = new NavDataModel();
@@ -75,6 +87,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
         drawerItem[1] = new NavDataModel(R.drawable.ic_user, "Profile");
         drawerItem[2] = new NavDataModel(R.drawable.ic_user_group, "Social");
         drawerItem[3] = new NavDataModel(R.drawable.ic_help_black_24dp, "FAQ");
+        drawerItem[4] = new NavDataModel(R.drawable.ic_help_black_24dp, "SignOut");
 
         DrawerListItemAdapter drawerItemCustomAdapter = new DrawerListItemAdapter(this, R.layout.list_drawer_item_layout, drawerItem);
         mDrawerList.setAdapter(drawerItemCustomAdapter);
@@ -107,9 +120,23 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
                 mDrawerLayout.closeDrawers();
                 startActivity(new Intent(Main.this, Profile.class));
                 break;
+            case 4:
+                mDrawerLayout.closeDrawers();
+                signOut();
+                startActivity(new Intent(Main.this, Login_Page.class));
             default:
                 break;
         }
+    }
+    private void signOut()
+    {
+        mGoogleSignInClient.signOut()
+                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        // ...
+                    }
+                });
     }
 
     @Override

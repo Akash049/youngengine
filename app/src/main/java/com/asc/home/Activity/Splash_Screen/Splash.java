@@ -1,4 +1,4 @@
-package com.asc.home;
+package com.asc.home.Activity.Splash_Screen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,8 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.asc.home.Activity.Main.Main;
+import com.asc.home.Activity.Login.Login_Page;
+import com.asc.home.R;
 
 public class Splash extends AppCompatActivity {
 private int slp=3;

@@ -1,4 +1,4 @@
-package com.asc.home;
+package com.asc.home.Activity.SignUp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.asc.home.Activity.Login.Login_Page;
 import com.asc.home.Activity.Main.Main;
+import com.asc.home.R;
 
 public class SignUp extends AppCompatActivity {
     TextView resignin;
@@ -20,7 +22,7 @@ public class SignUp extends AppCompatActivity {
         resignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent hello=new Intent(SignUp.this,Login_Page.class);
+                Intent hello=new Intent(SignUp.this, Login_Page.class);
                 startActivity(hello);
             }
         });
