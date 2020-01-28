@@ -87,7 +87,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
         drawerItem[1] = new NavDataModel(R.drawable.ic_user, "Profile");
         drawerItem[2] = new NavDataModel(R.drawable.ic_user_group, "Social");
         drawerItem[3] = new NavDataModel(R.drawable.ic_help_black_24dp, "FAQ");
-        drawerItem[4] = new NavDataModel(R.drawable.ic_help_black_24dp, "SignOut");
+        drawerItem[4] = new NavDataModel(R.drawable.ic_arrow_back_black_24dp, "SignOut");
 
         DrawerListItemAdapter drawerItemCustomAdapter = new DrawerListItemAdapter(this, R.layout.list_drawer_item_layout, drawerItem);
         mDrawerList.setAdapter(drawerItemCustomAdapter);
