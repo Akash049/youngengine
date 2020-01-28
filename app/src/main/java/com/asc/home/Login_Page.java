@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.asc.home.Activity.Main.Main;
@@ -28,12 +29,20 @@ public class Login_Page extends AppCompatActivity {
     LoginButton loginButton;
     CallbackManager callbackManager;
 EditText password;
+TextView user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_login__page);
-
+        user=findViewById(R.id.user);
+        user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Login_Page.this,SignUp.class);
+                startActivity(intent);
+            }
+        });
         button=findViewById(R.id.button2);
         email=findViewById(R.id.email);
         password=findViewById(R.id.password);

@@ -10,19 +10,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
-        <activity android:name=".Splash"
+        <activity android:name=".SignUp"
             android:theme="@style/NoActionBar"
-            >
+            ></activity>
+        <activity
+            android:name=".Splash"
+            android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login_Page"
-            android:theme="@style/NoActionBar"
-            />
-
+        <activity
+            android:name=".Login_Page"
+            android:theme="@style/NoActionBar" />
         <activity android:name=".Activity.font_try" />
         <activity
             android:name=".Activity.Wallet.Wallet"
@@ -36,9 +38,7 @@
         <activity
             android:name=".Activity.Main.Main"
             android:label="@string/app_name"
-            android:theme="@style/NoActionBar">
-
-        </activity>
+            android:theme="@style/NoActionBar"></activity>
         <activity
             android:name=".Activity.Mission.Mission"
             android:label="@string/app_name"
@@ -47,8 +47,9 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-        <meta-data android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
     </application>
 
 </manifest>
