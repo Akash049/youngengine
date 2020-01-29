@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.asc.home.Activity.Location_Test.Location_test;
 import com.asc.home.Activity.Login.Login_Page;
 import com.asc.home.Activity.Profile.Profile;
 import com.asc.home.Activity.Social.Social;
@@ -118,7 +119,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
                 break;
             case 3:
                 mDrawerLayout.closeDrawers();
-                startActivity(new Intent(Main.this, Profile.class));
+                startActivity(new Intent(Main.this, Location_test.class));
                 break;
             case 4:
                 mDrawerLayout.closeDrawers();
