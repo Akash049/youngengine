@@ -42,9 +42,11 @@
             </TextView>
 
             <ImageView
+                android:id="@+id/coin_icon"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:clickable="true"
                 android:padding="5dp"
                 android:src="@drawable/coin">
 

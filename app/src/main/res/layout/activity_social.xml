@@ -34,7 +34,8 @@
                 android:textColor="@color/white"
                 android:gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                >
 
             </TextView>
 
@@ -43,7 +44,9 @@
                 android:layout_weight="1"
                 android:src="@drawable/coin"
                 android:padding="5dp"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:id="@+id/coin_icon"
+                >
 
             </ImageView>
 

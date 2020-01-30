@@ -26,6 +26,7 @@ public class Social extends AppCompatActivity implements View.OnClickListener {
     TextView referral_code;
     private TextView creditValue;
     private ImageView hamIcon;
+    private ImageView coin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,8 @@ public class Social extends AppCompatActivity implements View.OnClickListener {
         creditValue.setOnClickListener(this);
         hamIcon = (ImageView) findViewById(R.id.ham_icon);
         hamIcon.setOnClickListener(this);
+        coin = (ImageView) findViewById(R.id.coin_icon);
+        coin.setOnClickListener(this);
         mrecyclerView = findViewById(R.id.recyclerView10);          //Initialisation of the recycler view
         mrecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -121,6 +124,9 @@ public class Social extends AppCompatActivity implements View.OnClickListener {
                 startActivity(new Intent(Social.this, Main.class));
                 break;
             case R.id.credit_value:
+                startActivity(new Intent(Social.this, Wallet.class));
+                break;
+            case R.id.coin_icon:
                 startActivity(new Intent(Social.this, Wallet.class));
                 break;
         }

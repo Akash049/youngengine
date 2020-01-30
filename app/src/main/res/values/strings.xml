@@ -8,4 +8,5 @@
     <string name="title_Active">Active</string>
     <string name="title_Learnings">Learnings</string>
     <string name="facebook_app_id">469439420390524</string>
+    <string name="title_activity_location__test">Map</string>
 </resources>

@@ -8,7 +8,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.asc.home.Activity.Location_Test.Location_test;
+import com.asc.home.Activity.FAQ.FAQ;
+import com.asc.home.Activity.Location_Test.Location_Test;
 import com.asc.home.Activity.Login.Login_Page;
 import com.asc.home.Activity.Profile.Profile;
 import com.asc.home.Activity.Social.Social;
@@ -77,7 +78,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
         hamIcon.setOnClickListener(this);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
-        NavDataModel[] drawerItem = new NavDataModel[5];
+        NavDataModel[] drawerItem = new NavDataModel[6];
 
         //First set the header details for the view
         navDataModel = new NavDataModel();
@@ -88,7 +89,8 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
         drawerItem[1] = new NavDataModel(R.drawable.ic_user, "Profile");
         drawerItem[2] = new NavDataModel(R.drawable.ic_user_group, "Social");
         drawerItem[3] = new NavDataModel(R.drawable.ic_help_black_24dp, "FAQ");
-        drawerItem[4] = new NavDataModel(R.drawable.ic_arrow_back_black_24dp, "SignOut");
+        drawerItem[4] = new NavDataModel(R.drawable.ic_map_black_24dp, "Maps");
+        drawerItem[5] = new NavDataModel(R.drawable.ic_arrow_back_black_24dp, "SignOut");
 
         DrawerListItemAdapter drawerItemCustomAdapter = new DrawerListItemAdapter(this, R.layout.list_drawer_item_layout, drawerItem);
         mDrawerList.setAdapter(drawerItemCustomAdapter);
@@ -119,12 +121,17 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
                 break;
             case 3:
                 mDrawerLayout.closeDrawers();
-                startActivity(new Intent(Main.this, Location_test.class));
+                startActivity(new Intent(Main.this, FAQ.class));
                 break;
             case 4:
                 mDrawerLayout.closeDrawers();
+                startActivity(new Intent(Main.this,Location_Test.class));
+                break;
+            case 5:
+                mDrawerLayout.closeDrawers();
                 signOut();
                 startActivity(new Intent(Main.this, Login_Page.class));
+                break;
             default:
                 break;
         }
