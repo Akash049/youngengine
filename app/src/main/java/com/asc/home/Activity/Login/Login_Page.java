@@ -67,9 +67,31 @@ public class Login_Page extends AppCompatActivity implements View.OnClickListene
         button=findViewById(R.id.button2);
         email=findViewById(R.id.email);
         password=findViewById(R.id.password);
-       loginButton=findViewById(R.id.fb_login);
-       callbackManager=CallbackManager.Factory.create();
-       loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+        loginButton= (Button) findViewById(R.id.login_fb);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+                    @Override
+                    public void onSuccess(LoginResult loginResult) {
+                        Intent intent = new Intent(Login_Page.this,Main.class);
+                        startActivity(intent);
+                    }
+
+                    @Override
+                    public void onCancel() {
+
+                    }
+
+                    @Override
+                    public void onError(FacebookException error) {
+
+                    }
+                });
+            }
+        });
+        callbackManager=CallbackManager.Factory.create();
+        /*loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
            @Override
            public void onSuccess(LoginResult loginResult) {
                  Intent intent = new Intent(Login_Page.this,Main.class);
@@ -85,7 +107,7 @@ public class Login_Page extends AppCompatActivity implements View.OnClickListene
            public void onError(FacebookException error) {
 
            }
-       });
+       });*/
     }
 
 

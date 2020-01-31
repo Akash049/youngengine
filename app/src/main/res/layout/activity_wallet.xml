@@ -187,7 +187,7 @@
                      android:textAlignment="center"
                     android:text="ME"
                     android:textColor="#000"
-                    android:textSize="18sp"
+                    android:textSize="18dp"
                     android:textStyle="bold"></TextView>
 
 
@@ -227,7 +227,7 @@
                     android:textAlignment="center"
                     android:text="ME"
                     android:textColor="#000"
-                    android:textSize="18sp"
+                    android:textSize="18dp"
                     android:textStyle="bold"></TextView>
 
 
@@ -266,7 +266,7 @@
                     android:textAlignment="center"
                     android:text="ME"
                     android:textColor="#000"
-                    android:textSize="18sp"
+                    android:textSize="18dp"
                     android:textStyle="bold"></TextView>
 
 
@@ -305,7 +305,7 @@
                     android:textAlignment="center"
                     android:text="ME"
                     android:textColor="#000"
-                    android:textSize="18sp"
+                    android:textSize="18dp"
                     android:textStyle="bold"></TextView>
 
 
@@ -344,7 +344,7 @@
                 android:textAlignment="center"
                 android:text="ME"
                 android:textColor="#000"
-                android:textSize="18sp"
+                android:textSize="18dp"
                 android:textStyle="bold"></TextView>
 
 
@@ -383,7 +383,7 @@
                     android:textAlignment="center"
                     android:text="ME"
                     android:textColor="#000"
-                    android:textSize="18sp"
+                    android:textSize="18dp"
                     android:textStyle="bold"></TextView>
 
 
@@ -422,7 +422,7 @@
                 android:textAlignment="center"
                 android:text="ME"
                 android:textColor="#000"
-                android:textSize="18sp"
+                android:textSize="18dp"
                 android:textStyle="bold"></TextView>
 
 
@@ -461,7 +461,7 @@
                     android:textAlignment="center"
                     android:text="ME"
                     android:textColor="#000"
-                    android:textSize="18sp"
+                    android:textSize="18dp"
                     android:textStyle="bold"></TextView>
 
 
@@ -500,7 +500,7 @@
                 android:textAlignment="center"
                 android:text="ME"
                 android:textColor="#000"
-                android:textSize="18sp"
+                android:textSize="18dp"
                 android:textStyle="bold"></TextView>
 
 
