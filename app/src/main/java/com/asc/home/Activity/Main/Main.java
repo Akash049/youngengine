@@ -35,7 +35,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-public class Main extends AppCompatActivity implements View.OnClickListener {
+public class Main extends AppCompatActivity  {
 
     //Container Variables
     private DrawerLayout mDrawerLayout;
@@ -72,10 +72,10 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void initialize(){
-        creditValue = (TextView)findViewById(R.id.credit_value);
-        creditValue.setOnClickListener(this);
-        hamIcon = (ImageView) findViewById(R.id.ham_icon);
-        hamIcon.setOnClickListener(this);
+      //  creditValue = (TextView)findViewById(R.id.credit_value);
+     //   creditValue.setOnClickListener(this);
+     //   hamIcon = (ImageView) findViewById(R.id.ham_icon);
+      //  hamIcon.setOnClickListener(this);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
         NavDataModel[] drawerItem = new NavDataModel[6];
@@ -147,7 +147,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
                 });
     }
 
-    @Override
+  /*  @Override
     public void onClick(View view) {
         int id = view.getId();
         switch (id){
@@ -158,7 +158,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
                 startActivity(new Intent(Main.this, Wallet.class));
                 break;
         }
-    }
+    }*/
 
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {

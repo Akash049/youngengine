@@ -1,6 +1,6 @@
 package com.asc.home.Model;
 
-public class NavDataModel {
+public class    NavDataModel {
     public int icon;
     public String name, userName,type;
 

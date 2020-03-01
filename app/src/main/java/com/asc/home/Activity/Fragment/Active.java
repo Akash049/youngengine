@@ -1,5 +1,7 @@
 package com.asc.home.Activity.Fragment;
+import androidx.fragment.app.Fragment;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,9 +10,9 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
+import androidx.annotation.RequiresApi;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProviders;;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
@@ -23,7 +25,7 @@ import com.asc.home.R;
 
 import java.util.ArrayList;
 
-public class Active extends Fragment {
+public class Active extends Fragment  {
 
     private DashboardViewModel dashboardViewModel;
     RecyclerView mirecyclerView;
@@ -47,6 +49,7 @@ public class Active extends Fragment {
         completedTextView.setTextColor(getResources().getColor(R.color.unselected_grey));
 
         dashboardViewModel.getText().observe(this, new Observer<String>() {
+            @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onChanged(@Nullable String s) {
                 // textView.setText(s);
@@ -61,6 +64,7 @@ public class Active extends Fragment {
 
 
               ongoingTextView.setOnClickListener(new View.OnClickListener() {
+                  @RequiresApi(api = Build.VERSION_CODES.M)
                   @Override
                   public void onClick(View v) {
                       mirecyclerView = getView().findViewById(R.id.recyclerview5);
@@ -77,6 +81,7 @@ public class Active extends Fragment {
               });
 
              completedTextView.setOnClickListener(new View.OnClickListener() {
+                 @RequiresApi(api = Build.VERSION_CODES.M)
                  @Override
                  public void onClick(View v) {
                      mirecyclerView = getView().findViewById(R.id.recyclerview5);

@@ -6,6 +6,10 @@
     <string name="title_active">active</string>
     <string name="title_learnings">learnings</string>
     <string name="title_Active">Active</string>
+    <string name="title_Profile">Profile</string>
+    <string name="title_Explore">Explore</string>
+    <string name="title_Saved">Saved</string>
+    <string name="title_Alerts">Alerts</string>
     <string name="title_Learnings">Learnings</string>
     <string name="facebook_app_id">469439420390524</string>
     <string name="title_activity_location__test">Map</string>

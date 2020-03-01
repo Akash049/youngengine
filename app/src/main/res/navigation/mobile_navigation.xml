@@ -22,4 +22,11 @@
         android:name="com.asc.home.Activity.Fragment.Learnings"
         android:label="@string/title_Learnings"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_Profile"
+        android:name="com.asc.home.Activity.Fragment.Profile"
+        android:label="@string/title_Profile"
+        tools:layout="@layout/fragment_profile"/>
+
+
 </navigation>

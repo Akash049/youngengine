@@ -15,9 +15,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.asc.home.Activity.ViewModels.HomeViewModel;
+import com.asc.home.Adapter.NewListAdapter;
 import com.asc.home.Adapter.SliderImageAdapter;
 import com.asc.home.Model.EventModel;
 import com.asc.home.Adapter.EventListAdapter;
+import com.asc.home.Model.NewModel;
 import com.asc.home.R;
 
 import java.util.ArrayList;
@@ -26,7 +28,7 @@ public class Home extends Fragment{
 
     // Container Vars
     private HomeViewModel homeViewModel;
-    private EventListAdapter eventListAdapter;
+    private NewListAdapter newListAdapter;
     private SliderImageAdapter sliderImageAdapter;
 
     // Wigets
@@ -47,106 +49,43 @@ public class Home extends Fragment{
     }
 
     private void initialize(View root){
-        imageSlider = (ViewPager) root.findViewById(R.id.image_slider);
-        sliderImageAdapter = new SliderImageAdapter(getContext());
-        imageSlider.setAdapter(sliderImageAdapter);
-        mrecyclerView=root.findViewById(R.id.recyclerView3);
+      //  imageSlider = (ViewPager) root.findViewById(R.id.image_slider);
+     //   sliderImageAdapter = new SliderImageAdapter(getContext());
+     //   imageSlider.setAdapter(sliderImageAdapter);
+        mrecyclerView=root.findViewById(R.id.new_view);
         mrecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        eventListAdapter = new EventListAdapter(getContext(),getMyList());
-        mrecyclerView.setAdapter(eventListAdapter);
+        newListAdapter = new NewListAdapter(getContext(),getMyList());
+        mrecyclerView.setAdapter(newListAdapter);
     }
 
-    private ArrayList<EventModel> getMyList(){
-        ArrayList<EventModel> eventModels =new ArrayList<>();
-        EventModel m=new EventModel();
-        m.setTitle("Python");
-        m.setCompanyname("wiztute");
-        m.setStatus("ONGOING");
-        m.setDate("15 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
+    private ArrayList<NewModel> getMyList(){
+        ArrayList<NewModel> newModels =new ArrayList<>();
+        NewModel m=new NewModel();
+        m.setNew_title("MUN In IITD");
+        m.setNew_date("21st Feb, 2020");
+        m.setTaskcoins("133");
+        m.setTasks("5");
+        m.setNew_image(R.drawable.people);
+        newModels.add(m);
 
-        m=new EventModel();
-        m.setTitle("Open a product and buy that product");
-        m.setCompanyname("wiztute");
-        m.setStatus("ONGOING");
-        m.setDate("02 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
+        m=new NewModel();
+        m.setNew_title("College Fest In Gargi");
+        m.setNew_date("21st Feb, 2020");
+        m.setTaskcoins("133");
+        m.setTasks("5");
+        m.setNew_image(R.drawable.people2);
+        newModels.add(m);
 
-        m=new EventModel();
-        m.setTitle("Data science");
-        m.setCompanyname("wiztute");
-        m.setStatus("COMPLETED");
-        m.setDate("10 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
+        m=new NewModel();
+        m.setNew_title("Cultural Fest");
+        m.setNew_date("21st Feb, 2020");
+        m.setTaskcoins("133");
+        m.setTasks("5");
+        m.setNew_image(R.drawable.people3);
+        newModels.add(m);
 
-        m=new EventModel();
-        m.setTitle("Blockchain");
-        m.setCompanyname("Wiztute");
-        m.setStatus("COMPLETED");
-        m.setDate("10 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
 
-        m=new EventModel();
-        m.setTitle("Data science");
-        m.setCompanyname("wiztute");
-        m.setStatus("COMPLETED");
-        m.setDate("10 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
-
-        m=new EventModel();
-        m.setTitle("Data science");
-        m.setCompanyname("wiztute");
-        m.setStatus("COMPLETED");
-        m.setDate("10 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
-
-        m=new EventModel();
-        m.setTitle("Data science");
-        m.setCompanyname("wiztute");
-        m.setStatus("COMPLETED");
-        m.setDate("10 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
-
-        m=new EventModel();
-        m.setTitle("Blockchain");
-        m.setCompanyname("Wiztute");
-        m.setStatus("COMPLETED");
-        m.setDate("10 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
-
-        m=new EventModel();
-        m.setTitle("Data science");
-        m.setCompanyname("wiztute");
-        m.setStatus("COMPLETED");
-        m.setDate("10 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
-
-        m=new EventModel();
-        m.setTitle("Data science");
-        m.setCompanyname("wiztute");
-        m.setStatus("COMPLETED");
-        m.setDate("10 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
-
-        m=new EventModel();
-        m.setTitle("Data science");
-        m.setCompanyname("wiztute");
-        m.setStatus("COMPLETED");
-        m.setDate("10 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
-
-        return eventModels;
+        return newModels;
     }
 
 }

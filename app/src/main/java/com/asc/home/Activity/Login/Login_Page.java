@@ -67,7 +67,7 @@ public class Login_Page extends AppCompatActivity implements View.OnClickListene
         button=findViewById(R.id.button2);
         email=findViewById(R.id.email);
         password=findViewById(R.id.password);
-        loginButton= (Button) findViewById(R.id.login_fb);
+        loginButton= (LoginButton) findViewById(R.id.login_fb);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
