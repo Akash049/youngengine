@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -18,9 +19,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.asc.home.Activity.ViewModels.DashboardViewModel;
+import com.asc.home.Adapter.NewListAdapter;
 import com.asc.home.Adapter.SliderImageAdapter;
 import com.asc.home.Model.EventModel;
 import com.asc.home.Adapter.EventListAdapter;
+import com.asc.home.Model.NewModel;
 import com.asc.home.R;
 
 import java.util.ArrayList;
@@ -29,9 +32,10 @@ public class Active extends Fragment  {
 
     private DashboardViewModel dashboardViewModel;
     RecyclerView mirecyclerView;
-    EventListAdapter dAdapter;
+    NewListAdapter dAdapter;
     TextView ongoingTextView;
     TextView completedTextView;
+    LinearLayout ongoingred,completedred;
     private SliderImageAdapter sliderImageAdapter;
     private ViewPager imageSlider;
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -43,23 +47,26 @@ public class Active extends Fragment  {
         //Initialization at one place
         ongoingTextView = root.findViewById(R.id.textView3);
         completedTextView = root.findViewById(R.id.textView7);
+        ongoingred=root.findViewById(R.id.ongoingred);
+        completedred=root.findViewById(R.id.completedred);
 
         // On the start of app, by default ongoing has to be selected
         ongoingTextView.setTextColor(getResources().getColor(R.color.red));
         completedTextView.setTextColor(getResources().getColor(R.color.unselected_grey));
+        ongoingred.setVisibility(View.VISIBLE);
 
         dashboardViewModel.getText().observe(this, new Observer<String>() {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onChanged(@Nullable String s) {
                 // textView.setText(s);
-                imageSlider = (ViewPager) getView().findViewById(R.id.image_slider);
-                sliderImageAdapter = new SliderImageAdapter(getContext());
-                imageSlider.setAdapter(sliderImageAdapter);
+              //  imageSlider = (ViewPager) getView().findViewById(R.id.image_slider);
+                //sliderImageAdapter = new SliderImageAdapter(getContext());
+                //imageSlider.setAdapter(sliderImageAdapter);
                 mirecyclerView = getView().findViewById(R.id.recyclerview5);
                 mirecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-                dAdapter= new EventListAdapter(getContext(),getMyList());
+                dAdapter= new NewListAdapter(getContext(),getMyList());
                 mirecyclerView.setAdapter(dAdapter);
 
 
@@ -70,12 +77,14 @@ public class Active extends Fragment  {
                       mirecyclerView = getView().findViewById(R.id.recyclerview5);
                       mirecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-                      dAdapter= new EventListAdapter(getContext(),getMyList());
+                      dAdapter= new NewListAdapter(getContext(),getMyList());
                       mirecyclerView.setAdapter(dAdapter);
 
                       //On clicking ongoing make it blue
                       ongoingTextView.setTextColor(getResources().getColor(R.color.red));
                       completedTextView.setTextColor(getResources().getColor(R.color.unselected_grey));
+                      completedred.setVisibility(View.GONE);
+                      ongoingred.setVisibility(View.VISIBLE);
 
                   }
 
@@ -88,12 +97,14 @@ public class Active extends Fragment  {
                      mirecyclerView = getView().findViewById(R.id.recyclerview5);
                      mirecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-                     dAdapter= new EventListAdapter(getContext(),MyList());
+                     dAdapter= new NewListAdapter(getContext(),MyList());
                      mirecyclerView.setAdapter(dAdapter);
 
                      //On clicking ongoing make it blue
                      completedTextView.setTextColor(getResources().getColor(R.color.red));
                      ongoingTextView.setTextColor(getResources().getColor(R.color.unselected_grey));
+                     completedred.setVisibility(View.VISIBLE);
+                     ongoingred.setVisibility(View.GONE);
 
                  }
              });
@@ -101,23 +112,23 @@ public class Active extends Fragment  {
         });
         return root;
     }
-    private ArrayList<EventModel> getMyList() {
-        ArrayList<EventModel> eventModels = new ArrayList<>();
-        EventModel m = new EventModel();
-        m.setTitle("Python");
-        m.setCompanyname("wiztute");
-        m.setStatus("ongoing");
-        m.setDate("15 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
+    private ArrayList<NewModel> getMyList() {
+        ArrayList<NewModel> newModels =new ArrayList<>();
+        NewModel m=new NewModel();
+        m.setNew_title("MUN In IITD");
+        m.setNew_date("21st Feb, 2020");
+        m.setTaskcoins("133");
+        m.setTasks("5");
+        m.setNew_image(R.drawable.people);
+        newModels.add(m);
 
-        m = new EventModel();
-        m.setTitle("Android");
-        m.setCompanyname("wiztute");
-        m.setStatus("ongoing");
-        m.setDate("02 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
+        m=new NewModel();
+        m.setNew_title("College Fest In Gargi");
+        m.setNew_date("21st Feb, 2020");
+        m.setTaskcoins("133");
+        m.setTasks("5");
+        m.setNew_image(R.drawable.people2);
+        newModels.add(m);
 
        /* m = new EventModel();
         m.setTitle("data science");
@@ -128,20 +139,20 @@ public class Active extends Fragment  {
         eventModels.add(m);
 
         */
-        return eventModels;
+        return newModels;
     }
 
 
-    private ArrayList<EventModel> MyList() {
-        ArrayList<EventModel> eventModels = new ArrayList<>();
-        EventModel m = new EventModel();
-        m.setTitle("Data science");
-        m.setCompanyname("wiztute");
-        m.setStatus("completed");
-        m.setDate("10 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
-        return eventModels;
+    private ArrayList<NewModel> MyList() {
+        ArrayList<NewModel> newModels =new ArrayList<>();
+        NewModel m=new NewModel();
+        m.setNew_title("Cultural Fest");
+        m.setNew_date("21st Feb, 2020");
+        m.setTaskcoins("133");
+        m.setTasks("5");
+        m.setNew_image(R.drawable.people3);
+        newModels.add(m);
+        return newModels;
 
     }
 }
