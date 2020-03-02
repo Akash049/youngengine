@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
@@ -17,6 +18,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.asc.home.Activity.ViewModels.HomeViewModel;
 import com.asc.home.Adapter.NewListAdapter;
 import com.asc.home.Adapter.SliderImageAdapter;
+import com.asc.home.ExampleBottomSheetDialog;
 import com.asc.home.Model.EventModel;
 import com.asc.home.Adapter.EventListAdapter;
 import com.asc.home.Model.NewModel;
@@ -24,13 +26,15 @@ import com.asc.home.R;
 
 import java.util.ArrayList;
 
-public class Home extends Fragment{
+import static java.security.AccessController.getContext;
+
+public class Home extends Fragment {
 
     // Container Vars
     private HomeViewModel homeViewModel;
     private NewListAdapter newListAdapter;
     private SliderImageAdapter sliderImageAdapter;
-
+    LinearLayout sort;
     // Wigets
     private RecyclerView mrecyclerView;
     private ViewPager imageSlider;
@@ -48,10 +52,18 @@ public class Home extends Fragment{
         return root;
     }
 
-    private void initialize(View root){
+    private void initialize(final View root){
       //  imageSlider = (ViewPager) root.findViewById(R.id.image_slider);
      //   sliderImageAdapter = new SliderImageAdapter(getContext());
      //   imageSlider.setAdapter(sliderImageAdapter);
+        sort=root.findViewById(R.id.sort);
+        sort.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ExampleBottomSheetDialog bottomSheet = new ExampleBottomSheetDialog();
+                bottomSheet.show(getFragmentManager(),"exampleBottomSheet");
+            }
+        });
         mrecyclerView=root.findViewById(R.id.new_view);
         mrecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         newListAdapter = new NewListAdapter(getContext(),getMyList());

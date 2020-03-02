@@ -45,7 +45,7 @@ public class Active extends Fragment  {
         completedTextView = root.findViewById(R.id.textView7);
 
         // On the start of app, by default ongoing has to be selected
-        ongoingTextView.setTextColor(getResources().getColor(R.color.colorPrimary));
+        ongoingTextView.setTextColor(getResources().getColor(R.color.red));
         completedTextView.setTextColor(getResources().getColor(R.color.unselected_grey));
 
         dashboardViewModel.getText().observe(this, new Observer<String>() {
@@ -74,8 +74,9 @@ public class Active extends Fragment  {
                       mirecyclerView.setAdapter(dAdapter);
 
                       //On clicking ongoing make it blue
-                      ongoingTextView.setTextColor(getResources().getColor(R.color.colorPrimary));
+                      ongoingTextView.setTextColor(getResources().getColor(R.color.red));
                       completedTextView.setTextColor(getResources().getColor(R.color.unselected_grey));
+
                   }
 
               });
@@ -91,7 +92,7 @@ public class Active extends Fragment  {
                      mirecyclerView.setAdapter(dAdapter);
 
                      //On clicking ongoing make it blue
-                     completedTextView.setTextColor(getResources().getColor(R.color.colorPrimary));
+                     completedTextView.setTextColor(getResources().getColor(R.color.red));
                      ongoingTextView.setTextColor(getResources().getColor(R.color.unselected_grey));
 
                  }

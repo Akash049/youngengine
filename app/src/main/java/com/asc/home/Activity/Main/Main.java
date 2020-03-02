@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -15,6 +16,7 @@ import com.asc.home.Activity.Profile.Profile;
 import com.asc.home.Activity.Social.Social;
 import com.asc.home.Activity.Wallet.Wallet;
 import com.asc.home.Adapter.DrawerListItemAdapter;
+import com.asc.home.ExampleBottomSheetDialog;
 import com.asc.home.Model.NavDataModel;
 import com.asc.home.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -42,7 +44,6 @@ public class Main extends AppCompatActivity  {
     private ListView mDrawerList;
     private NavDataModel navDataModel;
     private ActionBarDrawerToggle mDrawerToggle;
-
     //Widgets
     private ImageView hamIcon;
     private TextView creditValue;
@@ -79,7 +80,6 @@ public class Main extends AppCompatActivity  {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
         NavDataModel[] drawerItem = new NavDataModel[6];
-
         //First set the header details for the view
         navDataModel = new NavDataModel();
         navDataModel.setUserName("Akash Chandra");
