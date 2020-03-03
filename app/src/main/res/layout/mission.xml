@@ -9,41 +9,47 @@
     android:orientation="vertical"
     android:weightSum="10"
     >
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3">
+        android:layout_weight="9"
+        >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
 
         >
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/people"
+            android:src="@drawable/missionphoto"
             android:scaleType="fitXY"></ImageView>
-    </LinearLayout>
-    </LinearLayout>
+         </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="7"
-        android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
             android:text="College Fest In IITD"
             android:textSize="20dp"
             android:textColor="@color/red"
             android:fontFamily="@font/montserrat"
             android:paddingLeft="15dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             ></TextView>
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:text="21st, Feb 2020"
         android:paddingLeft="15dp"
         android:layout_marginTop="7dp"
@@ -53,10 +59,11 @@
     </TextView>
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
         android:text="A one of a kind event in IIT Delhi to train students on how a United Nation talks occur. Welcome to this event on Model United Nations "
         android:paddingLeft="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:paddingRight="10dp"
         android:fontFamily="@font/quicksand_medium"
         android:textStyle="bold"></TextView>
@@ -106,8 +113,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tasks"
+            android:textStyle="bold"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="0dp"
             android:textColor="#8D8D8D"
             android:fontFamily="@font/montserrat"
             android:textSize="16dp"></TextView>
@@ -166,12 +174,12 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@drawable/rounded_box"
-            android:layout_margin="20dp"></LinearLayout>
+            android:layout_margin="10dp"></LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="0dp"
             android:weightSum="10"
             >
             <ImageView
@@ -196,7 +204,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:weightSum="10"
             >
             <ImageView
@@ -217,8 +225,56 @@
 
 
         </LinearLayout>
-
-
-
     </LinearLayout>
+</ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:layout_marginBottom="5dp"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/askquestion_box"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Ask a Question"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:textSize="16dp"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_box"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:backgroundTint="@color/red"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Join In"
+                    android:textColor="#FFF"
+                    android:gravity="center"
+                    android:textSize="16dp"></TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
 </LinearLayout>

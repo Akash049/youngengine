@@ -58,25 +58,25 @@ public class Profile extends Fragment {
          rc.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 startActivity(new Intent(getActivity(),Wallet.class));
+           //      startActivity(new Intent(getActivity(),Wallet.class));
              }
          });
          rp.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 startActivity(new Intent(getActivity(),Wallet.class));
+                 //startActivity(new Intent(getActivity(),Wallet.class));
              }
          });
          set.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 startActivity(new Intent(getActivity(),Wallet.class));
+                // startActivity(new Intent(getActivity(),Wallet.class));
              }
          });
          learn.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 startActivity(new Intent(getActivity(),Wallet.class));
+                // startActivity(new Intent(getActivity(),Wallet.class));
              }
          });
     }
