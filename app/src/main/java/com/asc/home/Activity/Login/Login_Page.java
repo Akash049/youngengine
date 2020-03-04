@@ -56,7 +56,7 @@ public class Login_Page extends AppCompatActivity implements View.OnClickListene
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
         findViewById(R.id.sign_in_button).setOnClickListener(this);
-        user=findViewById(R.id.user);
+      /*  user=findViewById(R.id.user);
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,8 +65,8 @@ public class Login_Page extends AppCompatActivity implements View.OnClickListene
             }
         });
         button=findViewById(R.id.button2);
-        email=findViewById(R.id.email);
-        password=findViewById(R.id.password);
+     //   email=findViewById(R.id.email);
+        password=findViewById(R.id.password);*/
         loginButton= (LoginButton) findViewById(R.id.login_fb);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -54,4 +54,9 @@ public class NewListAdapter extends RecyclerView.Adapter<NewViewHolder> {
     public int getItemCount() {
         return newModels.size();
     }
+    public void filterlist(ArrayList<NewModel> filteredlist)
+    {
+        newModels = filteredlist;
+        notifyDataSetChanged();
+    }
 }

@@ -1,9 +1,17 @@
 package com.asc.home.Activity.Fragment;
 
+import android.app.Activity;
+import android.content.Context;
+import android.inputmethodservice.Keyboard;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
@@ -38,6 +46,8 @@ public class Home extends Fragment {
     // Wigets
     private RecyclerView mrecyclerView;
     private ViewPager imageSlider;
+    ImageView backy,cancel;
+    EditText search;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         homeViewModel=ViewModelProviders.of(this).get(HomeViewModel.class);
@@ -57,6 +67,38 @@ public class Home extends Fragment {
      //   sliderImageAdapter = new SliderImageAdapter(getContext());
      //   imageSlider.setAdapter(sliderImageAdapter);
         sort=root.findViewById(R.id.sort);
+        backy=root.findViewById(R.id.backy);
+        cancel=root.findViewById(R.id.cancel);
+        search=root.findViewById(R.id.search);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                search.setText("");
+            }
+        });
+        backy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                search.setText("");
+                hideKeyboardFrom(getContext(),search);
+            }
+        });
+        search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filter(s.toString());
+            }
+        });
         sort.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,6 +110,11 @@ public class Home extends Fragment {
         mrecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         newListAdapter = new NewListAdapter(getContext(),getMyList());
         mrecyclerView.setAdapter(newListAdapter);
+    }
+
+    public static void hideKeyboardFrom(Context context, View view) {
+        InputMethodManager imm = (InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
     private ArrayList<NewModel> getMyList(){
@@ -98,6 +145,17 @@ public class Home extends Fragment {
 
 
         return newModels;
+    }
+    private void filter(String text){
+        ArrayList<NewModel> filteredlist=new ArrayList<>();
+        for (NewModel newModel : getMyList())
+        {
+            if (newModel.getNew_title().toLowerCase().contains(text.toLowerCase()))
+            {
+                filteredlist.add(newModel);
+            }
+        }
+        newListAdapter.filterlist(filteredlist);
     }
 
 }
