@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,7 +39,8 @@ public class Login_Page extends AppCompatActivity implements View.OnClickListene
     LoginButton loginButton;
     CallbackManager callbackManager;
      EditText password;
-     TextView user;
+     TextView user,signin,signup;
+     LinearLayout signinblue,signupblue;
      GoogleSignInClient mGoogleSignInClient;
      int RC_SIGN_IN=0;
 
@@ -47,6 +49,32 @@ public class Login_Page extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_login__page);
+        signin=findViewById(R.id.signin);
+        signup=findViewById(R.id.signup);
+        signinblue=findViewById(R.id.signinblue);
+        signupblue=findViewById(R.id.signupblue);
+
+        signin.setTextColor(getResources().getColor(R.color.black));
+        signinblue.setVisibility(View.VISIBLE);
+
+        signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signin.setTextColor(getResources().getColor(R.color.black));
+                signup.setTextColor(getResources().getColor(R.color.unselected_grey));
+                signinblue.setVisibility(View.VISIBLE);
+                signupblue.setVisibility(View.GONE);
+            }
+        });
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signup.setTextColor(getResources().getColor(R.color.black));
+                signin.setTextColor(getResources().getColor(R.color.unselected_grey));
+                signupblue.setVisibility(View.VISIBLE);
+                signinblue.setVisibility(View.GONE);
+            }
+        });
         SignInButton signInButton = findViewById(R.id.sign_in_button);
         signInButton.setSize(SignInButton.SIZE_STANDARD);
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)

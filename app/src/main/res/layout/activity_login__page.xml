@@ -7,10 +7,171 @@
     android:clickable="true"
     tools:context=".Activity.Login.Login_Page"
     android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:weightSum="10"
+    android:weightSum="9"
     >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:weightSum="4"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            ></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="3"
+                >
+                <TextView
+                    android:id="@+id/signin"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2.6"
+                    android:paddingTop="10dp"
+                    android:text="Sign in"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:gravity="center">
+                </TextView>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:id="@+id/signinblue"
+                    android:layout_width="100dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.2"
+                    android:backgroundTint="#0087EC"
+                    android:background="@drawable/rounded_box"
+                    ></LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="3"
+                >
+                <TextView
+                    android:id="@+id/signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2.6"
+                    android:paddingTop="10dp"
+                    android:text="Sign up"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:gravity="center">
+                </TextView>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:id="@+id/signupblue"
+                    android:layout_width="100dp"
+                    android:layout_gravity="center"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"
+                    android:backgroundTint="#0087EC"
+                    android:background="@drawable/rounded_box"
+                    ></LinearLayout>
+            </LinearLayout>
 
+
+
+        </LinearLayout>
+    </LinearLayout>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="2"
+    android:elevation="5dp"
+    app:cardCornerRadius="15dp"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="5"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.4"
+            android:weightSum="2"
+            android:orientation="vertical"
+            >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:text="Email"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"></TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#00000000"
+                android:backgroundTint="#FEFEFEFE"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:textColor="@color/black"
+                android:inputType="textEmailAddress"></EditText>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.05"
+            android:background="#E9E9E9"
+            ></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.4"
+            android:weightSum="2"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:text="Password"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"></TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#00000000"
+                android:backgroundTint="#FEFEFEFE"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:textColor="@color/black"
+                android:inputType="textPassword"></EditText>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
 
 
     <Button

@@ -13,5 +13,7 @@
     <color name="golden">#F0A700</color>
     <color name="dark_gray">#37474F</color>
     <color name="red">#EF011F</color>
+    <color name="blue">#0087EC</color>
+    <color name="black">#000</color>
 
 </resources>
