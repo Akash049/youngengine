@@ -40,7 +40,7 @@ public class Login_Page extends AppCompatActivity implements View.OnClickListene
     CallbackManager callbackManager;
      EditText password;
      TextView user,signin,signup;
-     LinearLayout signinblue,signupblue;
+     LinearLayout signinblue,signupblue,button2;
      GoogleSignInClient mGoogleSignInClient;
      int RC_SIGN_IN=0;
 
@@ -75,15 +75,15 @@ public class Login_Page extends AppCompatActivity implements View.OnClickListene
                 signinblue.setVisibility(View.GONE);
             }
         });
-        SignInButton signInButton = findViewById(R.id.sign_in_button);
-        signInButton.setSize(SignInButton.SIZE_STANDARD);
+       // SignInButton signInButton = findViewById(R.id.button1);
+        //signInButton.setSize(SignInButton.SIZE_STANDARD);
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        findViewById(R.id.sign_in_button).setOnClickListener(this);
+        findViewById(R.id.button2).setOnClickListener(this);
       /*  user=findViewById(R.id.user);
         user.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +95,7 @@ public class Login_Page extends AppCompatActivity implements View.OnClickListene
         button=findViewById(R.id.button2);
      //   email=findViewById(R.id.email);
         password=findViewById(R.id.password);*/
-        loginButton= (LoginButton) findViewById(R.id.login_fb);
+     /* loginButton= (LoginButton) findViewById(R.id.login_fb);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -164,7 +164,7 @@ String mail=email.getText().toString();
             startActivity(intent);
         }
 
-        else{
+        else if(mail==""){
             Toast.makeText(getApplicationContext(),"Enter valid email",Toast.LENGTH_LONG).show();
         }if (password.getText().toString().equals(" ")) {
             password.setError("Enter password");
@@ -175,7 +175,7 @@ String mail=email.getText().toString();
     public void onClick(View v) {
 
         switch (v.getId()) {
-            case R.id.sign_in_button:
+            case R.id.button2:
                 signIn();
                 break;
             // ...

@@ -6,13 +6,17 @@ import android.inputmethodservice.Keyboard;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.TranslateAnimation;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
@@ -33,6 +37,9 @@ import com.asc.home.Model.NewModel;
 import com.asc.home.R;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 
 import static java.security.AccessController.getContext;
 
@@ -40,14 +47,19 @@ public class Home extends Fragment {
 
     // Container Vars
     private HomeViewModel homeViewModel;
-    private NewListAdapter newListAdapter;
+    public NewListAdapter newListAdapter;
     private SliderImageAdapter sliderImageAdapter;
-    LinearLayout sort;
+    LinearLayout sort,sortbyred,categoriesred,newest_first,oldest_first,featured,ongoing,only_near_me;
     // Wigets
     private RecyclerView mrecyclerView;
     private ViewPager imageSlider;
     ImageView backy,cancel;
     EditText search;
+    TextView result;
+    private LinearLayout sortView, bottomPullUpSortView;
+    private Button closeView;
+    private boolean firstBottomOpenView = false, isBottomSortViewOpen = false;
+    TextView sortby,categories;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         homeViewModel=ViewModelProviders.of(this).get(HomeViewModel.class);
@@ -60,16 +72,123 @@ public class Home extends Fragment {
             }
         });
         return root;
+
+
     }
 
     private void initialize(final View root){
       //  imageSlider = (ViewPager) root.findViewById(R.id.image_slider);
      //   sliderImageAdapter = new SliderImageAdapter(getContext());
      //   imageSlider.setAdapter(sliderImageAdapter);
+        newest_first=root.findViewById(R.id.newest_first);
+        oldest_first= root.findViewById(R.id.oldest_first);
+        featured=root.findViewById(R.id.featured);
+        ongoing=root.findViewById(R.id.ongoingitems);
+        only_near_me=root.findViewById(R.id.only_near_me);
+        sortbyred=root.findViewById(R.id.sortbyred);
+        categoriesred=root.findViewById(R.id.categoriesred);
+        sortby=root.findViewById(R.id.sortby);
+        categories=root.findViewById(R.id.categories);
+        sortby.setTextColor(getResources().getColor(R.color.black));
+        categories.setTextColor(getResources().getColor(R.color.unselected_grey));
+        categoriesred.setVisibility(View.GONE);
+        sortbyred.setVisibility(View.VISIBLE);
         sort=root.findViewById(R.id.sort);
         backy=root.findViewById(R.id.backy);
         cancel=root.findViewById(R.id.cancel);
         search=root.findViewById(R.id.search);
+       // result=root.findViewById(R.id.result);
+        newest_first.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               // sortArrayList();
+                newest_first.setBackgroundColor(getResources().getColor(R.color.lay_red));
+                oldest_first.setBackgroundColor(getResources().getColor(R.color.white));
+                ongoing.setBackgroundColor(getResources().getColor(R.color.white));
+                featured.setBackgroundColor(getResources().getColor(R.color.white));
+                only_near_me.setBackgroundColor(getResources().getColor(R.color.white));
+            }
+        });
+        oldest_first.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // sortArrayList();
+                oldest_first.setBackgroundColor(getResources().getColor(R.color.lay_red));
+                newest_first.setBackgroundColor(getResources().getColor(R.color.white));
+                ongoing.setBackgroundColor(getResources().getColor(R.color.white));
+                featured.setBackgroundColor(getResources().getColor(R.color.white));
+                only_near_me.setBackgroundColor(getResources().getColor(R.color.white));
+            }
+        });
+        featured.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // sortArrayList();
+                featured.setBackgroundColor(getResources().getColor(R.color.lay_red));
+                oldest_first.setBackgroundColor(getResources().getColor(R.color.white));
+                ongoing.setBackgroundColor(getResources().getColor(R.color.white));
+                newest_first.setBackgroundColor(getResources().getColor(R.color.white));
+                only_near_me.setBackgroundColor(getResources().getColor(R.color.white));
+            }
+        });
+        ongoing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // sortArrayList();
+                ongoing.setBackgroundColor(getResources().getColor(R.color.lay_red));
+                oldest_first.setBackgroundColor(getResources().getColor(R.color.white));
+                newest_first.setBackgroundColor(getResources().getColor(R.color.white));
+                featured.setBackgroundColor(getResources().getColor(R.color.white));
+                only_near_me.setBackgroundColor(getResources().getColor(R.color.white));
+            }
+        });
+        only_near_me.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // sortArrayList();
+                only_near_me.setBackgroundColor(getResources().getColor(R.color.lay_red));
+                oldest_first.setBackgroundColor(getResources().getColor(R.color.white));
+                ongoing.setBackgroundColor(getResources().getColor(R.color.white));
+                featured.setBackgroundColor(getResources().getColor(R.color.white));
+                newest_first.setBackgroundColor(getResources().getColor(R.color.white));
+            }
+        });
+
+
+
+        sortby.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sortby.setTextColor(getResources().getColor(R.color.black));
+                categories.setTextColor(getResources().getColor(R.color.unselected_grey));
+                categoriesred.setVisibility(View.GONE);
+                sortbyred.setVisibility(View.VISIBLE);
+
+            }
+        });
+        categories.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                categories.setTextColor(getResources().getColor(R.color.black));
+                sortby.setTextColor(getResources().getColor(R.color.unselected_grey));
+                sortbyred.setVisibility(View.GONE);
+                categoriesred.setVisibility(View.VISIBLE);
+
+            }
+        });
+
+
+        sort=root.findViewById(R.id.sort);
+        sort.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                ExampleBottomSheetDialog bottomSheet = new ExampleBottomSheetDialog();
+//                bottomSheet.show(getFragmentManager(),"exampleBottomSheet");
+                slideUpBottomView();
+            }
+        });
+
+
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,13 +216,16 @@ public class Home extends Fragment {
             @Override
             public void afterTextChanged(Editable s) {
                 filter(s.toString());
+
             }
         });
-        sort.setOnClickListener(new View.OnClickListener() {
+        sortView = (LinearLayout)root.findViewById(R.id.sort_view);
+        bottomPullUpSortView = (LinearLayout)root.findViewById(R.id.sort_option_view);
+        closeView = (Button) root.findViewById(R.id.close_view);
+        closeView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                ExampleBottomSheetDialog bottomSheet = new ExampleBottomSheetDialog();
-                bottomSheet.show(getFragmentManager(),"exampleBottomSheet");
+            public void onClick(View view) {
+                slideDownBottomView();
             }
         });
         mrecyclerView=root.findViewById(R.id.new_view);
@@ -112,10 +234,46 @@ public class Home extends Fragment {
         mrecyclerView.setAdapter(newListAdapter);
     }
 
+
+
     public static void hideKeyboardFrom(Context context, View view) {
         InputMethodManager imm = (InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
+
+    public void slideUpBottomView(){
+        if(!isBottomSortViewOpen){
+            isBottomSortViewOpen =true;
+            sortView.setBackgroundColor(getResources().getColor(R.color.semi));
+            TranslateAnimation animate = new TranslateAnimation(
+                    0,                 // fromXDelta
+                    0,                 // toXDelta
+                    bottomPullUpSortView.getHeight(),  // fromYDelta
+                    0);                // toYDelta
+            animate.setDuration(500);
+            animate.setFillAfter(true);
+            bottomPullUpSortView.startAnimation(animate);
+        }
+    }
+    public void slideDownBottomView() {
+        if (isBottomSortViewOpen) {
+            isBottomSortViewOpen = false;
+            sortView.setBackgroundColor(getResources().getColor(R.color.trans));
+            TranslateAnimation animate = new TranslateAnimation(
+                    0,                 // fromXDelta
+                    0,                 // toXDelta
+                    0,                 // fromYDelta
+                    bottomPullUpSortView.getHeight()); // toYDelta
+            animate.setDuration(500);
+            animate.setFillAfter(true);
+            bottomPullUpSortView.startAnimation(animate);
+//      sortFrame.setVisibility(View.GONE);
+            bottomPullUpSortView.setVisibility(View.GONE);
+        }
+    }
+    // slide the view from its current position to below itself
+
+
 
     private ArrayList<NewModel> getMyList(){
         ArrayList<NewModel> newModels =new ArrayList<>();
@@ -129,15 +287,15 @@ public class Home extends Fragment {
 
         m=new NewModel();
         m.setNew_title("College Fest In Gargi");
-        m.setNew_date("21st Feb, 2020");
+        m.setNew_date("22nd Feb, 2020");
         m.setTaskcoins("133");
         m.setTasks("5");
         m.setNew_image(R.drawable.people2);
         newModels.add(m);
 
         m=new NewModel();
-        m.setNew_title("Cultural Fest");
-        m.setNew_date("21st Feb, 2020");
+        m.setNew_title("Cultural Fest In S");
+        m.setNew_date("23rd Feb, 2020");
         m.setTaskcoins("133");
         m.setTasks("5");
         m.setNew_image(R.drawable.people3);
@@ -155,7 +313,23 @@ public class Home extends Fragment {
                 filteredlist.add(newModel);
             }
         }
+//        result.setText(filteredlist.size());
         newListAdapter.filterlist(filteredlist);
+
+//        result.setText(newListAdapter.getItemCount());
+
     }
+    private void sortArrayList(){
+        Collections.sort(getMyList(), new Comparator<NewModel>() {
+            @Override
+            public int compare(NewModel o1, NewModel o2) {
+                return o1.getNew_title().compareTo(o2.getNew_title());
+            }
+        });
+            newListAdapter.notifyDataSetChanged();
+    }
+
+
+
 
 }

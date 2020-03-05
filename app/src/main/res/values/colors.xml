@@ -15,5 +15,9 @@
     <color name="red">#EF011F</color>
     <color name="blue">#0087EC</color>
     <color name="black">#000</color>
+    <color name="semi">#66424242</color>
+    <color name="trans">#00ffffff</color>
+    <color name="lay_red">#ef9a9a</color>
+
 
 </resources>

@@ -12,7 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_weight="2.5"
         android:weightSum="4"
         android:orientation="vertical"
         >
@@ -42,7 +42,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="2.6"
-                    android:paddingTop="10dp"
+
                     android:text="Sign in"
                     android:textSize="20dp"
                     android:fontFamily="@font/quicksand_medium"
@@ -72,7 +72,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="2.6"
-                    android:paddingTop="10dp"
                     android:text="Sign up"
                     android:textSize="20dp"
                     android:fontFamily="@font/quicksand_medium"
@@ -120,9 +119,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:textSize="20dp"
+            android:textSize="16dp"
+            android:paddingTop="2dp"
             android:layout_weight="1"
             android:text="Email"
+            android:textColor="@color/unselected_grey"
             android:fontFamily="@font/montserrat"
             android:gravity="center_vertical"
             android:paddingLeft="20dp"></TextView>
@@ -131,6 +132,7 @@
                 android:layout_height="0dp"
                 android:background="#00000000"
                 android:backgroundTint="#FEFEFEFE"
+                android:fontFamily="@font/montserrat"
                 android:layout_weight="1"
                 android:paddingLeft="20dp"
                 android:textColor="@color/black"
@@ -153,7 +155,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:textSize="20dp"
+                android:textSize="16dp"
+                android:textColor="@color/unselected_grey"
+                android:paddingTop="2dp"
                 android:layout_weight="1"
                 android:text="Password"
                 android:fontFamily="@font/montserrat"
@@ -166,6 +170,7 @@
                 android:backgroundTint="#FEFEFEFE"
                 android:layout_weight="1"
                 android:paddingLeft="20dp"
+                android:fontFamily="@font/montserrat"
                 android:textColor="@color/black"
                 android:inputType="textPassword"></EditText>
 
@@ -173,45 +178,63 @@
     </LinearLayout>
 </androidx.cardview.widget.CardView>
 
-
     <Button
-
-        android:id="@+id/button2"
-        android:layout_width="218dp"
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="#0087EC"
+        android:layout_marginTop="25dp"
+      android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/sign_in_box"
         android:onClick="buclick"
         android:text="Sign In"
         android:textColor="#FFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.060000002" />
+         />
 
-    <com.facebook.login.widget.LoginButton
-        android:id="@+id/login_fb"
-        android:layout_width="214dp"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:clickable="true"
+        android:layout_weight="0.5"
+        android:layout_gravity="center"
+        android:text="Or sign in with"
+        android:textColor="@color/black"
 
-        />
+        android:gravity="center"></TextView>
 
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/sign_in_button"
-        android:layout_width="218dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_weight="1"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        />
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/sign_in_google"
+                android:weightSum="2"
+                >
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.85"
+                    android:paddingLeft="40dp"
+                    android:src="@drawable/final_google"
+                    android:layout_gravity="center_vertical"
+                    ></ImageView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="GOOGLE"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"></TextView>
+            </LinearLayout>
+
+
+
+
 
 </LinearLayout>
