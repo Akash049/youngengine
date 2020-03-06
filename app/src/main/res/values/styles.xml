@@ -19,6 +19,10 @@
     <item name="colorControlHighlight">#ff6d00</item>
         <item name="android:progress">@drawable/progress_bar</item>
 </style>
+    <style name="MyCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">18dp</item>
+        <item name="fontFamily">sans-serif</item>
+    </style>
 
 
 </resources>

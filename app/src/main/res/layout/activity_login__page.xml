@@ -1,240 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clickable="true"
     tools:context=".Activity.Login.Login_Page"
-    android:orientation="vertical"
-    android:weightSum="9"
     >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2.5"
-        android:weightSum="4"
-        android:orientation="vertical"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            ></LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:weightSum="2"
-            android:orientation="horizontal"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            >
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:weightSum="3"
-                >
-                <TextView
-                    android:id="@+id/signin"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2.6"
-
-                    android:text="Sign in"
-                    android:textSize="20dp"
-                    android:fontFamily="@font/quicksand_medium"
-                    android:gravity="center">
-                </TextView>
-                <LinearLayout
-                    android:visibility="gone"
-                    android:orientation="vertical"
-                    android:id="@+id/signinblue"
-                    android:layout_width="100dp"
-                    android:layout_height="0dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.2"
-                    android:backgroundTint="#0087EC"
-                    android:background="@drawable/rounded_box"
-                    ></LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:weightSum="3"
-                >
-                <TextView
-                    android:id="@+id/signup"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2.6"
-                    android:text="Sign up"
-                    android:textSize="20dp"
-                    android:fontFamily="@font/quicksand_medium"
-                    android:gravity="center">
-                </TextView>
-                <LinearLayout
-                    android:visibility="gone"
-                    android:orientation="vertical"
-                    android:id="@+id/signupblue"
-                    android:layout_width="100dp"
-                    android:layout_gravity="center"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.2"
-                    android:backgroundTint="#0087EC"
-                    android:background="@drawable/rounded_box"
-                    ></LinearLayout>
-            </LinearLayout>
-
-
-
-        </LinearLayout>
-    </LinearLayout>
-<androidx.cardview.widget.CardView
+<com.google.android.material.appbar.AppBarLayout
     android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="2"
-    android:elevation="5dp"
-    app:cardCornerRadius="15dp"
-    android:layout_marginLeft="40dp"
-    android:layout_marginRight="40dp"
+    android:layout_height="wrap_content"
     >
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:layout_scrollFlags="scroll|enterAlways"
+        ></androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/my_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabTextAppearance="@style/MyCustomTabText"
+        app:tabTextColor="@color/unselected_grey"
+        app:tabSelectedTextColor="@color/black"
+        app:tabIndicatorColor="@color/blue"
+        android:background="@color/white"
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        ></com.google.android.material.tabs.TabLayout>
+
+
+
+
+</com.google.android.material.appbar.AppBarLayout>
+    <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="5"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2.4"
-            android:weightSum="2"
-            android:orientation="vertical"
-            >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:textSize="16dp"
-            android:paddingTop="2dp"
-            android:layout_weight="1"
-            android:text="Email"
-            android:textColor="@color/unselected_grey"
-            android:fontFamily="@font/montserrat"
-            android:gravity="center_vertical"
-            android:paddingLeft="20dp"></TextView>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:background="#00000000"
-                android:backgroundTint="#FEFEFEFE"
-                android:fontFamily="@font/montserrat"
-                android:layout_weight="1"
-                android:paddingLeft="20dp"
-                android:textColor="@color/black"
-                android:inputType="textEmailAddress"></EditText>
+        android:id="@+id/my_view_pager"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        ></androidx.viewpager.widget.ViewPager>
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.05"
-            android:background="#E9E9E9"
-            ></LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2.4"
-            android:weightSum="2"
-            android:orientation="vertical"
-            >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:textSize="16dp"
-                android:textColor="@color/unselected_grey"
-                android:paddingTop="2dp"
-                android:layout_weight="1"
-                android:text="Password"
-                android:fontFamily="@font/montserrat"
-                android:gravity="center_vertical"
-                android:paddingLeft="20dp"></TextView>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:background="#00000000"
-                android:backgroundTint="#FEFEFEFE"
-                android:layout_weight="1"
-                android:paddingLeft="20dp"
-                android:fontFamily="@font/montserrat"
-                android:textColor="@color/black"
-                android:inputType="textPassword"></EditText>
-
-        </LinearLayout>
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="25dp"
-      android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:background="@drawable/sign_in_box"
-        android:onClick="buclick"
-        android:text="Sign In"
-        android:textColor="#FFFF"
-         />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:layout_gravity="center"
-        android:text="Or sign in with"
-        android:textColor="@color/black"
-
-        android:gravity="center"></TextView>
-
-
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:background="@drawable/sign_in_google"
-                android:weightSum="2"
-                >
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="0.85"
-                    android:paddingLeft="40dp"
-                    android:src="@drawable/final_google"
-                    android:layout_gravity="center_vertical"
-                    ></ImageView>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:text="GOOGLE"
-                    android:textSize="15dp"
-                    android:textColor="@color/white"
-                    android:layout_weight="1"></TextView>
-            </LinearLayout>
-
-
-
-
-
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

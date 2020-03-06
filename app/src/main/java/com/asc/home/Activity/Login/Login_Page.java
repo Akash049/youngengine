@@ -1,89 +1,37 @@
 package com.asc.home.Activity.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager.widget.ViewPager;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.asc.home.Activity.Main.Main;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import com.asc.home.R;
-import com.asc.home.Activity.SignUp.SignUp;
-import com.facebook.CallbackManager;
-import com.facebook.FacebookCallback;
-import com.facebook.FacebookException;
+import com.asc.home.Activity.Fragment.Sign_In_Fragment;
+import com.asc.home.Activity.Fragment.Sign_up_Fragment;
+import com.asc.home.Adapter.ViewPagerAdapter;
 import com.facebook.FacebookSdk;
-import com.facebook.login.LoginResult;
-import com.facebook.login.widget.LoginButton;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.SignInButton;
-import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.tasks.Task;
+import com.google.android.material.tabs.TabLayout;
 
-public class Login_Page extends AppCompatActivity implements View.OnClickListener {
-    Button button;
-    EditText email;
-    LoginButton loginButton;
-    CallbackManager callbackManager;
-     EditText password;
-     TextView user,signin,signup;
-     LinearLayout signinblue,signupblue,button2;
-     GoogleSignInClient mGoogleSignInClient;
-     int RC_SIGN_IN=0;
+public class Login_Page extends AppCompatActivity  {
+
+    private Toolbar toolbar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_login__page);
-        signin=findViewById(R.id.signin);
-        signup=findViewById(R.id.signup);
-        signinblue=findViewById(R.id.signinblue);
-        signupblue=findViewById(R.id.signupblue);
+        toolbar=findViewById(R.id.my_toolbar);
+        tabLayout=findViewById(R.id.my_tab_layout);
+        viewPager=findViewById(R.id.my_view_pager);
 
-        signin.setTextColor(getResources().getColor(R.color.black));
-        signinblue.setVisibility(View.VISIBLE);
+        setSupportActionBar(toolbar);
+        setupViewPager(viewPager);
+        tabLayout.setupWithViewPager(viewPager);
 
-        signin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signin.setTextColor(getResources().getColor(R.color.black));
-                signup.setTextColor(getResources().getColor(R.color.unselected_grey));
-                signinblue.setVisibility(View.VISIBLE);
-                signupblue.setVisibility(View.GONE);
-            }
-        });
-        signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signup.setTextColor(getResources().getColor(R.color.black));
-                signin.setTextColor(getResources().getColor(R.color.unselected_grey));
-                signupblue.setVisibility(View.VISIBLE);
-                signinblue.setVisibility(View.GONE);
-            }
-        });
-       // SignInButton signInButton = findViewById(R.id.button1);
-        //signInButton.setSize(SignInButton.SIZE_STANDARD);
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
-
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-
-        findViewById(R.id.button2).setOnClickListener(this);
       /*  user=findViewById(R.id.user);
         user.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,39 +86,17 @@ public class Login_Page extends AppCompatActivity implements View.OnClickListene
        });*/
     }
 
-
-
-    public void buclick(View view) {
-        String validemail = "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
-
-                "\\@" +
-
-                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
-
-                "(" +
-
-                "\\." +
-
-                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
-
-                ")+";
-
-String mail=email.getText().toString();
-        Matcher matcher= Pattern.compile(validemail).matcher(mail);
-        if(matcher.matches())
-        {
-            Toast.makeText(getApplicationContext(),"true",Toast.LENGTH_LONG).show();
-            Intent intent=new Intent(Login_Page.this,Main.class);
-            startActivity(intent);
-        }
-
-        else if(mail==""){
-            Toast.makeText(getApplicationContext(),"Enter valid email",Toast.LENGTH_LONG).show();
-        }if (password.getText().toString().equals(" ")) {
-            password.setError("Enter password");
-        }
+    private void setupViewPager(ViewPager viewPager)
+    {
+        ViewPagerAdapter viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager());
+        viewPagerAdapter.addFragment(new Sign_In_Fragment(),"Sign  In");
+        viewPagerAdapter.addFragment(new Sign_up_Fragment(),"Sign  Up");
+        viewPager.setAdapter(viewPagerAdapter);
     }
 
+
+
+/*
     @Override
     public void onClick(View v) {
 
@@ -210,5 +136,5 @@ String mail=email.getText().toString();
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
             Log.w("Error", "signInResult:failed code=" + e.getStatusCode());
         }
-    }
+    }*/
 }
