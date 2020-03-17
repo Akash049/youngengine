@@ -107,6 +107,8 @@ public class Home extends Fragment {
                 ongoing.setBackgroundColor(getResources().getColor(R.color.white));
                 featured.setBackgroundColor(getResources().getColor(R.color.white));
                 only_near_me.setBackgroundColor(getResources().getColor(R.color.white));
+                slideDownBottomView();
+
             }
         });
         oldest_first.setOnClickListener(new View.OnClickListener() {
@@ -118,6 +120,7 @@ public class Home extends Fragment {
                 ongoing.setBackgroundColor(getResources().getColor(R.color.white));
                 featured.setBackgroundColor(getResources().getColor(R.color.white));
                 only_near_me.setBackgroundColor(getResources().getColor(R.color.white));
+                slideDownBottomView();
             }
         });
         featured.setOnClickListener(new View.OnClickListener() {
@@ -129,6 +132,7 @@ public class Home extends Fragment {
                 ongoing.setBackgroundColor(getResources().getColor(R.color.white));
                 newest_first.setBackgroundColor(getResources().getColor(R.color.white));
                 only_near_me.setBackgroundColor(getResources().getColor(R.color.white));
+                slideDownBottomView();
             }
         });
         ongoing.setOnClickListener(new View.OnClickListener() {
@@ -140,6 +144,7 @@ public class Home extends Fragment {
                 newest_first.setBackgroundColor(getResources().getColor(R.color.white));
                 featured.setBackgroundColor(getResources().getColor(R.color.white));
                 only_near_me.setBackgroundColor(getResources().getColor(R.color.white));
+                slideDownBottomView();
             }
         });
         only_near_me.setOnClickListener(new View.OnClickListener() {
@@ -151,6 +156,7 @@ public class Home extends Fragment {
                 ongoing.setBackgroundColor(getResources().getColor(R.color.white));
                 featured.setBackgroundColor(getResources().getColor(R.color.white));
                 newest_first.setBackgroundColor(getResources().getColor(R.color.white));
+                slideDownBottomView();
             }
         });
 

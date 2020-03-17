@@ -8,6 +8,8 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.asc.home.Activity.Login.Login_Page;
+import com.asc.home.Activity.Main.Main;
+import com.asc.home.Activity.Starting;
 import com.asc.home.R;
 
 public class Splash extends AppCompatActivity {
@@ -32,7 +34,7 @@ private int slp=3;
                 e.printStackTrace();
             }
 
-            Intent intent = new Intent(Splash.this, Login_Page.class);
+            Intent intent = new Intent(Splash.this, Starting.class);
             startActivity(intent);
             Splash.this.finish();
 
