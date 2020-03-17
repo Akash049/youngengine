@@ -50,8 +50,10 @@
         android:layout_weight="0.9"
         android:weightSum="2"
         android:orientation="horizontal"
+        android:clickable="true"
         >
         <TextView
+            android:id="@+id/skip_learn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:gravity="center"

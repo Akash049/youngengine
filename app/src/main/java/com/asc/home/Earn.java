@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.asc.home.Activity.Login.Login_Page;
 
@@ -17,7 +18,7 @@ import com.asc.home.Activity.Login.Login_Page;
  * A simple {@link Fragment} subclass.
  */
 public class Earn extends Fragment {
-   Button start;
+   TextView start;
     public Earn() {
         // Required empty public constructor
     }

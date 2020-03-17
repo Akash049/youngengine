@@ -5,23 +5,59 @@
     android:layout_height="match_parent"
     tools:context=".Earn"
     android:orientation="vertical"
+    android:weightSum="3"
     >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.7">
+        <ImageView
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/earn"
+            >
+        </ImageView>
 
-    <!-- TODO: Update blank fragment layout -->
+    </LinearLayout>
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:textSize="22dp"
+        android:fontFamily="@font/montserrat"
         android:text="Earn"
-        android:layout_gravity="center"
-        android:textColor="@color/red"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
         />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:id="@+id/start"
-        ></Button>
+    <TextView
 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Earn while inculcating a new skill"
+        ></TextView>
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:textColor="#FF67A3"
+        android:text="Get Started"
+        android:textSize="20dp"
+        android:id="@+id/start"
+        android:clickable="true"
+        android:fontFamily="@font/montserrat"
+        >
+
+    </TextView>
 </LinearLayout>

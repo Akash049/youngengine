@@ -15,7 +15,7 @@
             android:layout_gravity="bottom"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/learn"
+            android:src="@drawable/work"
             >
         </ImageView>
 
@@ -52,8 +52,10 @@
         android:layout_weight="0.9"
         android:weightSum="2"
         android:orientation="horizontal"
+        android:clickable="true"
         >
         <TextView
+            android:id="@+id/skip_work"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:gravity="center"
