@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.asc.home.Activity.Main.Main;
 import com.asc.home.Activity.ViewModels.ProfileviewModel;
 import com.asc.home.Activity.Wallet.Wallet;
 import com.asc.home.R;
@@ -52,7 +53,7 @@ public class Profile extends Fragment {
          open.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-
+                 ((Main)getActivity()).open_side_drawer();
              }
          });
          rc.setOnClickListener(new View.OnClickListener() {

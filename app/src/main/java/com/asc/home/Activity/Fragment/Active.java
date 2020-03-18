@@ -29,7 +29,6 @@ import com.asc.home.R;
 import java.util.ArrayList;
 
 public class Active extends Fragment  {
-
     private DashboardViewModel dashboardViewModel;
     RecyclerView mirecyclerView;
     NewListAdapter dAdapter;

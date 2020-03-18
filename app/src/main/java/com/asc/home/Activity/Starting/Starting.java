@@ -1,16 +1,15 @@
-package com.asc.home.Activity;
+package com.asc.home.Activity.Starting;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.view.View;
 
 import com.asc.home.Adapter.StartingPagerAdapter;
-import com.asc.home.Earn;
-import com.asc.home.Learn;
+import com.asc.home.Activity.StartingViewPager_Fragments.Earn;
+import com.asc.home.Activity.StartingViewPager_Fragments.Learn;
 import com.asc.home.R;
-import com.asc.home.Work;
+import com.asc.home.Activity.StartingViewPager_Fragments.Work;
 
 public class Starting extends AppCompatActivity {
      private ViewPager viewPager;

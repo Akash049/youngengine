@@ -7,8 +7,8 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 
 import com.asc.home.R;
-import com.asc.home.Activity.Fragment.Sign_In_Fragment;
-import com.asc.home.Activity.Fragment.Sign_up_Fragment;
+import com.asc.home.Activity.LoginViewPager_Fragments.Sign_In_Fragment;
+import com.asc.home.Activity.LoginViewPager_Fragments.Sign_up_Fragment;
 import com.asc.home.Adapter.ViewPagerAdapter;
 import com.facebook.FacebookSdk;
 import com.google.android.material.tabs.TabLayout;

@@ -1,4 +1,4 @@
-package com.asc.home;
+package com.asc.home.Activity.StartingViewPager_Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.asc.home.Activity.Login.Login_Page;
+import com.asc.home.R;
 
 
 /**

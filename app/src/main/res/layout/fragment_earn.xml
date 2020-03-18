@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Earn"
+    tools:context=".Activity.StartingViewPager_Fragments.Earn"
     android:orientation="vertical"
     android:weightSum="3"
     >

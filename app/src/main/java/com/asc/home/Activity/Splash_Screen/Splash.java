@@ -7,9 +7,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.asc.home.Activity.Login.Login_Page;
-import com.asc.home.Activity.Main.Main;
-import com.asc.home.Activity.Starting;
+import com.asc.home.Activity.Starting.Starting;
 import com.asc.home.R;
 
 public class Splash extends AppCompatActivity {

@@ -16,7 +16,6 @@ import com.asc.home.Activity.Profile.Profile;
 import com.asc.home.Activity.Social.Social;
 import com.asc.home.Activity.Wallet.Wallet;
 import com.asc.home.Adapter.DrawerListItemAdapter;
-import com.asc.home.ExampleBottomSheetDialog;
 import com.asc.home.Model.NavDataModel;
 import com.asc.home.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -168,5 +167,9 @@ public class Main extends AppCompatActivity  {
             selectItem(position);
         }
 
+    }
+
+    public void open_side_drawer(){
+        mDrawerLayout.openDrawer(GravityCompat.START);
     }
 }
