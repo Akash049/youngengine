@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import java.util.ArrayList;
 
 public class StartingPagerAdapter extends FragmentPagerAdapter {
-    private final ArrayList<Fragment>fragmentArrayList=new ArrayList<>();
+    public final ArrayList<Fragment>fragmentArrayList=new ArrayList<>();
 
     public StartingPagerAdapter(@NonNull FragmentManager fm) {
         super(fm);
@@ -28,5 +28,6 @@ public class StartingPagerAdapter extends FragmentPagerAdapter {
     {
         fragmentArrayList.add(Fragment);
     }
+
 
 }
