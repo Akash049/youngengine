@@ -12,7 +12,7 @@ import com.asc.home.Activity.Main.Main;
 import com.asc.home.Activity.Wallet.Wallet;
 import com.asc.home.R;
 
-public class FAQ extends AppCompatActivity implements View.OnClickListener {
+public class FAQ extends AppCompatActivity  {
     private TextView creditValue;
     private ImageView hamIcon;
     private ImageView coin;
@@ -21,16 +21,16 @@ public class FAQ extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq);
-        creditValue = (TextView) findViewById(R.id.credit_value);
-        creditValue.setOnClickListener(this);
-        hamIcon = (ImageView) findViewById(R.id.ham_icon);
-        hamIcon.setOnClickListener(this);
-        coin=(ImageView)findViewById(R.id.coin_icon);
-        coin.setOnClickListener(this);
+        //creditValue = (TextView) findViewById(R.id.credit_value);
+        // creditValue.setOnClickListener(this);
+        // hamIcon = (ImageView) findViewById(R.id.ham_icon);
+        // hamIcon.setOnClickListener(this);
+        //coin=(ImageView)findViewById(R.id.coin_icon);
+        //coin.setOnClickListener(this);
 
     }
 
-    @Override
+   /* @Override
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
@@ -44,5 +44,5 @@ public class FAQ extends AppCompatActivity implements View.OnClickListener {
                 startActivity(new Intent(FAQ.this, Wallet.class));
                 break;
         }
-    }
+    }*/
 }

@@ -30,7 +30,6 @@ import androidx.viewpager.widget.ViewPager;
 import com.asc.home.Activity.ViewModels.HomeViewModel;
 import com.asc.home.Adapter.NewListAdapter;
 import com.asc.home.Adapter.SliderImageAdapter;
-import com.asc.home.ExampleBottomSheetDialog;
 import com.asc.home.Model.EventModel;
 import com.asc.home.Adapter.EventListAdapter;
 import com.asc.home.Model.NewModel;

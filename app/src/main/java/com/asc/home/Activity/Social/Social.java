@@ -19,7 +19,7 @@ import com.asc.home.R;
 
 import java.util.ArrayList;
 
-public class Social extends AppCompatActivity implements View.OnClickListener {
+public class Social extends AppCompatActivity{
     RecyclerView mrecyclerView;
     EventListAdapter eventListAdapter;
     Button sharing;
@@ -32,12 +32,12 @@ public class Social extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_social);
-        creditValue = (TextView) findViewById(R.id.credit_value);
-        creditValue.setOnClickListener(this);
-        hamIcon = (ImageView) findViewById(R.id.ham_icon);
-        hamIcon.setOnClickListener(this);
-        coin = (ImageView) findViewById(R.id.coin_icon);
-        coin.setOnClickListener(this);
+//        creditValue = (TextView) findViewById(R.id.credit_value);
+  //      creditValue.setOnClickListener(this);
+    //    hamIcon = (ImageView) findViewById(R.id.ham_icon);
+      //  hamIcon.setOnClickListener(this);
+     //   coin = (ImageView) findViewById(R.id.coin_icon);
+    //    coin.setOnClickListener(this);
         mrecyclerView = findViewById(R.id.recyclerView10);          //Initialisation of the recycler view
         mrecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -116,8 +116,8 @@ public class Social extends AppCompatActivity implements View.OnClickListener {
         return eventModels;
     }
 
-    @Override
-    public void onClick(View v) {
+   // @Override
+   /* public void onClick(View v) {
         int id = v.getId();
         switch (id) {
             case R.id.ham_icon:
@@ -130,5 +130,5 @@ public class Social extends AppCompatActivity implements View.OnClickListener {
                 startActivity(new Intent(Social.this, Wallet.class));
                 break;
         }
-    }
+    }*/
 }

@@ -24,13 +24,13 @@
             android:layout_height="@dimen/profile_height"
             android:visibility="visible"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
-            android:src="@drawable/user_acc"/>
+            android:src="@drawable/youngengine"/>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="3"
             android:layout_height="match_parent"
-            android:paddingTop="6dp"
+            android:paddingTop="0dp"
             android:paddingLeft="10dp"
             android:orientation="vertical">
 
