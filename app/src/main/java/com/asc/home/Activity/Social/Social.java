@@ -14,14 +14,16 @@ import android.widget.TextView;
 import com.asc.home.Activity.Main.Main;
 import com.asc.home.Activity.Wallet.Wallet;
 import com.asc.home.Adapter.EventListAdapter;
+import com.asc.home.Adapter.NewListAdapter;
 import com.asc.home.Model.EventModel;
+import com.asc.home.Model.NewModel;
 import com.asc.home.R;
 
 import java.util.ArrayList;
 
 public class Social extends AppCompatActivity{
     RecyclerView mrecyclerView;
-    EventListAdapter eventListAdapter;
+    NewListAdapter eventListAdapter;
     Button sharing;
     TextView referral_code;
     private TextView creditValue;
@@ -41,7 +43,7 @@ public class Social extends AppCompatActivity{
         mrecyclerView = findViewById(R.id.recyclerView10);          //Initialisation of the recycler view
         mrecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        eventListAdapter = new EventListAdapter(this, getMyList());
+        eventListAdapter = new NewListAdapter(this, getMyList());
         mrecyclerView.setAdapter(eventListAdapter);
         sharing = findViewById(R.id.sharing);                      //Initialisation of the sharing button
         referral_code = findViewById(R.id.code);
@@ -56,62 +58,30 @@ public class Social extends AppCompatActivity{
         });
     }
 
-    private ArrayList<EventModel> getMyList() {
-        ArrayList<EventModel> eventModels = new ArrayList<>();
-        EventModel m = new EventModel();
-        m.setTitle("Python");
-        m.setCompanyname("wiztute");
-        m.setStatus("ONGOING");
-        m.setDate("15 jan 2020");
-        m.setImg(R.drawable.images);
+    private ArrayList<NewModel> getMyList() {
+        ArrayList<NewModel> eventModels = new ArrayList<>();
+        NewModel m = new NewModel();
+        m.setNew_title("MUN In IITD");
+        m.setNew_date("21st Feb, 2020");
+        m.setTaskcoins("133");
+        m.setTasks("5");
+        m.setNew_image(R.drawable.people);
         eventModels.add(m);
 
-        m = new EventModel();
-        m.setTitle("Open a product and buy that product");
-        m.setCompanyname("wiztute");
-        m.setStatus("ONGOING");
-        m.setDate("02 jan 2020");
-        m.setImg(R.drawable.images);
+        m=new NewModel();
+        m.setNew_title("College Fest In Gargi");
+        m.setNew_date("22nd Feb, 2020");
+        m.setTaskcoins("133");
+        m.setTasks("5");
+        m.setNew_image(R.drawable.people2);
         eventModels.add(m);
 
-        m = new EventModel();
-        m.setTitle("Data science");
-        m.setCompanyname("wiztute");
-        m.setStatus("COMPLETED");
-        m.setDate("10 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
-
-        m = new EventModel();
-        m.setTitle("Blockchain");
-        m.setCompanyname("Wiztute");
-        m.setStatus("COMPLETED");
-        m.setDate("10 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
-
-        m = new EventModel();
-        m.setTitle("Data science");
-        m.setCompanyname("wiztute");
-        m.setStatus("COMPLETED");
-        m.setDate("10 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
-
-        m = new EventModel();
-        m.setTitle("Data science");
-        m.setCompanyname("wiztute");
-        m.setStatus("COMPLETED");
-        m.setDate("10 jan 2020");
-        m.setImg(R.drawable.images);
-        eventModels.add(m);
-
-        m = new EventModel();
-        m.setTitle("Data science");
-        m.setCompanyname("wiztute");
-        m.setStatus("COMPLETED");
-        m.setDate("10 jan 2020");
-        m.setImg(R.drawable.images);
+        m=new NewModel();
+        m.setNew_title("Cultural Fest In S");
+        m.setNew_date("23rd Feb, 2020");
+        m.setTaskcoins("133");
+        m.setTasks("5");
+        m.setNew_image(R.drawable.people3);
         eventModels.add(m);
         return eventModels;
     }

@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.asc.home.Activity.Login.Login_Page;
 import com.asc.home.Activity.Main.Main;
+import com.asc.home.Activity.OTP_Login;
 import com.asc.home.R;
 import com.facebook.CallbackManager;
 import com.facebook.login.widget.LoginButton;
@@ -39,7 +40,7 @@ public class Sign_In_Fragment extends Fragment implements View.OnClickListener {
     LoginButton loginButton;
     CallbackManager callbackManager;
     EditText password;
-    TextView user,signin,signup;
+    TextView user,signin,signup,forgotpass;
     LinearLayout signinblue,signupblue,button2;
     GoogleSignInClient mGoogleSignInClient;
     int RC_SIGN_IN=0;
@@ -58,6 +59,13 @@ public class Sign_In_Fragment extends Fragment implements View.OnClickListener {
         View root=inflater.inflate(R.layout.fragment_sign__in_, container, false);
         emailEntry=root.findViewById(R.id.email_entry);
         passwordEntry=root.findViewById(R.id.password_entry);
+        forgotpass=root.findViewById(R.id.forgot_pass);
+        forgotpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), OTP_Login.class));
+            }
+        });
        // signin=root.findViewById(R.id.signin);
        // signup=findViewById(R.id.signup);
        // signinblue=findViewById(R.id.signinblue);

@@ -6,6 +6,7 @@
     >
 
     <TextView
+        android:fontFamily="@font/quicksand_medium"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -22,8 +23,8 @@
         android:layout_height="0dp"
         android:layout_weight="4"
         android:orientation="horizontal"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         >
@@ -73,10 +74,13 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="8"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/recyclerView10"
         ></androidx.recyclerview.widget.RecyclerView>
 
     <TextView
+        android:fontFamily="@font/montserrat"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -85,32 +89,38 @@
         android:textColor="#000"
         android:gravity="center"></TextView>
     <TextView
+        android:fontFamily="@font/montserrat"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:textSize="16dp"
+        android:gravity="center"
         android:layout_weight="1"
         android:text="Refer a friend and earn 500 coins each"
-        android:paddingLeft="45dp"
         android:textColor="#000"
         android:layout_marginTop="2dp"
         ></TextView>
 
     <TextView
         android:id="@+id/code"
+        android:fontFamily="@font/montserrat"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:paddingLeft="70dp"
+        android:gravity="center"
         android:text="Your referral code : wafasfa"
         android:textColor="#000"
         android:textSize="16dp"></TextView>
 
     <Button
         android:id="@+id/sharing"
-        android:layout_width="wrap_content"
+        android:background="@drawable/sign_in_box"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textColor="@color/white"
         android:layout_gravity="center"
-        android:layout_weight="2"
+        android:layout_weight="1.7"
         android:text="Share Code"></Button>
 
 </LinearLayout>

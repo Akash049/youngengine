@@ -13,6 +13,37 @@
     <string name="title_Learnings">Learnings</string>
     <string name="facebook_app_id">469439420390524</string>
     <string name="title_activity_location__test">Map</string>
+    <string name="faq1">FAQ 1</string>
+    <string name="faq2">FAQ 2</string>
+    <string name="faq3">FAQ 3</string>
+    <string name="faq4">FAQ 4</string>
+    <string name="faq5">FAQ 5</string>
+    <string-array name="faq1">
+        <item>item1</item>
+    </string-array>
+    <string-array name="faq2">
+        <item>item1</item>
+        <item>item2</item>
+    </string-array>
+    <string-array name="faq3">
+        <item>item1</item>
+        <item>item2</item>
+        <item>item3</item>
+    </string-array>
+    <string-array name="faq4">
+        <item>item1</item>
+        <item>item2</item>
+        <item>item3</item>
+        <item>item4</item>
+    </string-array>
+    <string-array name="faq5">
+        <item>item1</item>
+        <item>item2</item>
+        <item>item3</item>
+        <item>item4</item>
+        <item>item5</item>
+    </string-array>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
