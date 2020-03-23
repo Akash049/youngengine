@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.android.volley.NetworkResponse;
@@ -31,6 +32,7 @@ EditText ph_num,otp;
 Button verify,send;
 String url, url2;
 RequestQueue requestQueue;
+LinearLayout lay1,lay2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,10 +41,14 @@ RequestQueue requestQueue;
         otp=findViewById(R.id.otp);
         verify=findViewById(R.id.verify_otp);
         send=findViewById(R.id.send_otp);
+        lay1=findViewById(R.id.lay1);
+        lay2=findViewById(R.id.lay2);
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getOTP();
+                lay1.setVisibility(View.GONE);
+                lay2.setVisibility(View.VISIBLE);
             }
         });
         verify.setOnClickListener(new View.OnClickListener() {

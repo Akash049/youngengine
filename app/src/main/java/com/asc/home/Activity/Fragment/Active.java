@@ -129,15 +129,7 @@ public class Active extends Fragment  {
         m.setNew_image(R.drawable.people2);
         newModels.add(m);
 
-       /* m = new EventModel();
-        m.setTitle("data science");
-        m.setCompanyname("wiztute");
-        m.setStatus("completed");
-        m.setDate("10 jan 2020");
-        m.setImg(R.drawable.logo);
-        eventModels.add(m);
 
-        */
         return newModels;
     }
 

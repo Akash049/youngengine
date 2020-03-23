@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.asc.home.Activity.Learning;
 import com.asc.home.Activity.Main.Main;
 import com.asc.home.Activity.ViewModels.ProfileviewModel;
 import com.asc.home.Activity.Wallet.Wallet;
@@ -77,7 +78,7 @@ public class Profile extends Fragment {
          learn.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                // startActivity(new Intent(getActivity(),Wallet.class));
+                 startActivity(new Intent(getActivity(), Learning.class));
              }
          });
     }

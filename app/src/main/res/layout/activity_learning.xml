@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Learning"
+    android:orientation="vertical"
+    android:weightSum="10"
+    >
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:text="Learnings"
+      android:textColor="@color/black"
+      android:textSize="21dp"
+      android:fontFamily="@font/montserrat"
+    >
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/learnings_view"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
