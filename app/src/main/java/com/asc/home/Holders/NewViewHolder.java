@@ -1,4 +1,4 @@
-package com.asc.home.Adapter;
+package com.asc.home.Holders;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -10,18 +10,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.asc.home.Interface.Itemclicklistener;
 import com.asc.home.R;
 
-public class LearningsViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-    ImageView learnings_image;
-    TextView learnings_title,skill1,skill2,skill3;
+public class NewViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+   public ImageView event_image;
+  public   TextView event_title,event_date,event_tasks,event_taskcoins;
     Itemclicklistener itemclicklistener;
 
-    public LearningsViewHolder(@NonNull View itemView) {
+    public NewViewHolder(@NonNull View itemView) {
         super(itemView);
-        this.learnings_image=itemView.findViewById(R.id.learnings_image);
-        this.learnings_title=itemView.findViewById(R.id.learnings_title);
-        this.skill1=itemView.findViewById(R.id.skill1);
-        this.skill2=itemView.findViewById(R.id.skill2);
-        this.skill3=itemView.findViewById(R.id.skill3);
+        this.event_image=itemView.findViewById(R.id.new_image);
+        this.event_title=itemView.findViewById(R.id.new_title);
+        this.event_date=itemView.findViewById(R.id.new_date);
+        this.event_tasks=itemView.findViewById(R.id.tasks);
+        this.event_taskcoins=itemView.findViewById(R.id.taskcoins);
         itemView.setOnClickListener(this);
     }
 

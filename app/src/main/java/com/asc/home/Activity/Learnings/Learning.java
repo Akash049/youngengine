@@ -1,4 +1,4 @@
-package com.asc.home.Activity;
+package com.asc.home.Activity.Learnings;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;

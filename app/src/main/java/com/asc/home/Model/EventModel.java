@@ -1,8 +1,8 @@
 package com.asc.home.Model;
 
 public class EventModel {
-    private String title,companyname,date,status,distance,requirements;
-    private int img;
+    public String title,companyname,date,status,distance,requirements;
+    public int img;
 
 
     public String getTitle() {

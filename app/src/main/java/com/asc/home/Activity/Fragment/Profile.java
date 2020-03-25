@@ -2,25 +2,24 @@ package com.asc.home.Activity.Fragment;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import com.asc.home.Activity.Learning;
+import com.asc.home.Activity.Learnings.Learning;
 import com.asc.home.Activity.Main.Main;
+import com.asc.home.Activity.Redeem.Redeem;
+import com.asc.home.Activity.Referral.Referral;
+import com.asc.home.Activity.Settings.Settings;
 import com.asc.home.Activity.ViewModels.ProfileviewModel;
-import com.asc.home.Activity.Wallet.Wallet;
 import com.asc.home.R;
 
 public class Profile extends Fragment {
@@ -60,19 +59,19 @@ public class Profile extends Fragment {
          rc.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-           //      startActivity(new Intent(getActivity(),Wallet.class));
+                 startActivity(new Intent(getActivity(), Referral.class));
              }
          });
          rp.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 //startActivity(new Intent(getActivity(),Wallet.class));
+                 startActivity(new Intent(getActivity(), Redeem.class));
              }
          });
          set.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                // startActivity(new Intent(getActivity(),Wallet.class));
+                 startActivity(new Intent(getActivity(), Settings.class));
              }
          });
          learn.setOnClickListener(new View.OnClickListener() {

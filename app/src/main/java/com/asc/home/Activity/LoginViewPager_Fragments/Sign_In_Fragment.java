@@ -15,9 +15,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.asc.home.Activity.Login.Login_Page;
 import com.asc.home.Activity.Main.Main;
-import com.asc.home.Activity.OTP_Login;
+import com.asc.home.Activity.OTPLogin.OTP_Login;
 import com.asc.home.R;
 import com.facebook.CallbackManager;
 import com.facebook.login.widget.LoginButton;

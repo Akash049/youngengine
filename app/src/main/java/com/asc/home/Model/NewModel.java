@@ -1,8 +1,8 @@
 package com.asc.home.Model;
 
 public class NewModel {
-    private int new_image;
-    private String new_title,new_date,tasks,taskcoins;
+    public int new_image;
+    public String new_title,new_date,tasks,taskcoins;
 
     public int getNew_image() {
         return new_image;

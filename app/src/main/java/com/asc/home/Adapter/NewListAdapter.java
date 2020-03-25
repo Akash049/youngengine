@@ -2,18 +2,16 @@ package com.asc.home.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.asc.home.Activity.Mission.Mission;
+import com.asc.home.Holders.NewViewHolder;
 import com.asc.home.Interface.Itemclicklistener;
-import com.asc.home.Model.EventModel;
 import com.asc.home.Model.NewModel;
 import com.asc.home.R;
 

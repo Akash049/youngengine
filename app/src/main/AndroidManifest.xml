@@ -16,11 +16,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
-        <activity android:name=".Activity.Learning"
+        <activity android:name=".Activity.Referral.Referral"
             android:theme="@style/NoActionBar"
             ></activity>
+        <activity android:name=".Activity.Redeem.Redeem"
+            android:theme="@style/NoActionBar"
+            />
+        <activity android:name=".Activity.Settings.Settings"
+            android:theme="@style/NoActionBar"
+            />
         <activity
-            android:name=".Activity.OTP_Login"
+            android:name=".Activity.Learnings.Learning"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".Activity.OTPLogin.OTP_Login"
             android:theme="@style/NoActionBar" />
         <activity
             android:name=".Activity.Starting.Starting"

@@ -1,8 +1,8 @@
 package com.asc.home.Model;
 
 public class LearningsModel {
-    private int learnings_image;
-    private String learnings_title,skill1,skill2,skill3;
+    public int learnings_image;
+    public String learnings_title,skill1,skill2,skill3;
 
     public int getLearnings_image() {
         return learnings_image;

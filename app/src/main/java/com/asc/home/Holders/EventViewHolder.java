@@ -1,4 +1,4 @@
-package com.asc.home.Adapter;
+package com.asc.home.Holders;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -11,8 +11,8 @@ import com.asc.home.Interface.Itemclicklistener;
 import com.asc.home.R;
 
 public class EventViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-    ImageView mimg;
-    TextView mtitle,mcompanyname,mstatus,mdate;
+  public   ImageView mimg;
+    public TextView mtitle,mcompanyname,mstatus,mdate;
     Itemclicklistener itemclicklistener;
 
     public EventViewHolder(@NonNull View itemView) {
