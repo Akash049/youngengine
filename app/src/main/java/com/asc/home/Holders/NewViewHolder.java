@@ -12,7 +12,7 @@ import com.asc.home.R;
 
 public class NewViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
    public ImageView event_image;
-  public   TextView event_title,event_date,event_tasks,event_taskcoins;
+  public  TextView event_title,event_date,event_tasks,event_taskcoins;
     Itemclicklistener itemclicklistener;
 
     public NewViewHolder(@NonNull View itemView) {

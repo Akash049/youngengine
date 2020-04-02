@@ -47,22 +47,19 @@
 
         </LinearLayout>
 
-        <LinearLayout
+            <de.hdodenhof.circleimageview.CircleImageView
 
-            android:layout_width="100dp"
-            android:layout_height="0dp"
-            android:layout_weight="3"
-            android:layout_gravity="center"
-            android:src="@drawable/profile_photo">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:layout_weight="3"
                 android:paddingLeft="5dp"
-                android:src="@drawable/ninja"></ImageView>
+                android:layout_gravity="center"
+                android:src="@drawable/ninja">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
 
             >
-        </LinearLayout>
+
 
         <TextView
             android:layout_width="wrap_content"

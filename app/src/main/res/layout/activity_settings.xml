@@ -1,9 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.Settings.Settings">
+    tools:context=".Activity.Settings.Settings"
+    android:orientation="vertical"
+    android:weightSum="10"
+    >
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_weight="0"
+        android:background="@color/white"
+        >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:weightSum="10">
+
+            <ImageView
+                android:id="@+id/return_back"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:src="@drawable/back"
+                android:tint="@color/black">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:gravity="center"
+                android:paddingRight="60dp"
+                android:text="Settings"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat"
+                android:textSize="22dp">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile"
+        android:layout_width="140dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_weight="2"
+        android:src="@drawable/ninja"
+        ></de.hdodenhof.circleimageview.CircleImageView>
+<Button
+    android:layout_width="200dp"
+    android:layout_height="0dp"
+    android:layout_weight="0.7"
+    android:layout_gravity="center"
+    android:textColor="@color/white"
+    android:textSize="15dp"
+    android:background="@drawable/sign_in_box"
+    android:text="Upload an Image"
+    android:backgroundTint="@color/blue"
+    android:layout_marginTop="15dp"
+    android:gravity="center"
+    android:fontFamily="@font/quicksand_medium"
+    android:id="@+id/pick"
+    ></Button>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="Mobile Number"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/quicksand_medium"
+        >
+
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="8800520654"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="11dp"
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Email"
+        android:layout_marginTop="25dp"
+        >
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="akash@wiztute.com"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="11dp"
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Name"
+        android:layout_marginTop="25dp"
+        >
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="Akash Chandra"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="11dp"
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/blue"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Nick Name"
+
+        android:layout_marginTop="25dp"
+        >
+    </TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:weightSum="2"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="11dp"
+        >
+    <EditText
+        android:id="@+id/nickname"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.6"
+        android:text="Akash Chandra"
+        android:layout_marginLeft="25dp"
+        android:background="@color/white"
+        ></EditText>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:src="@drawable/ic_mode_edit_black_24dp"
+            android:id="@+id/name_edit"
+            ></ImageView>
+</LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/blue"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Brief Information"
+        android:layout_marginTop="25dp"
+        >
+    </TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:weightSum="2"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="11dp"
+        >
+    <EditText
+        android:id="@+id/info"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.6"
+        android:text="Akash Chandra"
+        android:layout_marginLeft="25dp"
+        android:background="@color/white"
+        >
+    </EditText>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:src="@drawable/ic_mode_edit_black_24dp"
+            android:id="@+id/info_edit"
+            ></ImageView>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:background="@drawable/sign_in_box"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:text="Update Profile"
+        android:textColor="@color/white"
+        android:layout_marginTop="25dp"
+        android:id="@+id/update"
+        ></Button>
+
+
+
+
+</LinearLayout>
