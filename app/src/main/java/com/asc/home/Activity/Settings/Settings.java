@@ -28,7 +28,7 @@ EditText info,nickname;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-       update=findViewById(R.id.update);
+        update=findViewById(R.id.update);
         profile=findViewById(R.id.profile);
         pick=findViewById(R.id.pick);
         info=findViewById(R.id.info);
