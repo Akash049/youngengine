@@ -10,7 +10,7 @@
 
     <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">#EF011F</item>
-        <item name="colorPrimaryDark">@color/light_gray</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="MyProgressBar" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">

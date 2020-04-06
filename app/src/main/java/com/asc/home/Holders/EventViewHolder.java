@@ -10,18 +10,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.asc.home.Interface.Itemclicklistener;
 import com.asc.home.R;
 
-public class EventViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-  public   ImageView mimg;
-    public TextView mtitle,mcompanyname,mstatus,mdate;
+public class EventViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+   public ImageView event_image;
+  public   TextView event_title,event_date,event_tasks,event_taskcoins;
     Itemclicklistener itemclicklistener;
 
     public EventViewHolder(@NonNull View itemView) {
         super(itemView);
-        this.mimg = itemView.findViewById(R.id.img);
-        this.mtitle = itemView.findViewById(R.id.titler);
-        this.mcompanyname = itemView.findViewById(R.id.companyname);
-//        this.mstatus = itemView.findViewById(R.id.status);
-//        this.mdate = itemView.findViewById(R.id.Coins);
+        this.event_image=itemView.findViewById(R.id.new_image);
+        this.event_title=itemView.findViewById(R.id.new_title);
+        this.event_date=itemView.findViewById(R.id.new_date);
+        this.event_tasks=itemView.findViewById(R.id.tasks);
+        //this.event_taskcoins=itemView.findViewById(R.id.taskcoins);
         itemView.setOnClickListener(this);
     }
 
@@ -33,5 +33,4 @@ public class EventViewHolder extends RecyclerView.ViewHolder implements View.OnC
     {
         this.itemclicklistener=ic;
     }
-
 }

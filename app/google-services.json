@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "779340391334",
+    "firebase_url": "https://youngenginer-1c1ab.firebaseio.com",
+    "project_id": "youngenginer-1c1ab",
+    "storage_bucket": "youngenginer-1c1ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779340391334:android:f95351f45c56160557e567",
+        "android_client_info": {
+          "package_name": "com.asc.home"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "779340391334-c73vfn5m2capg79fnrel8cvi87ise0te.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.asc.home",
+            "certificate_hash": "f5d1114201b6391ee20c2a2dd19ec1fd20ebebdc"
+          }
+        },
+        {
+          "client_id": "779340391334-9plu2rsotdc1m00tsqoobvdmapgkm6oi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9MDmvqviXJba6gmVfweZJevUm6BvL6NE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "779340391334-9plu2rsotdc1m00tsqoobvdmapgkm6oi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

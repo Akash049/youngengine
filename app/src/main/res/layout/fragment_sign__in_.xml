@@ -48,7 +48,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:textSize="16dp"
+                    android:textSize="12dp"
                     android:paddingTop="2dp"
                     android:layout_weight="1"
                     android:text="Email"
@@ -92,7 +92,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:textSize="16dp"
+                    android:textSize="12dp"
                     android:textColor="@color/unselected_grey"
                     android:paddingTop="2dp"
                     android:layout_weight="1"
@@ -141,6 +141,18 @@
         android:textColor="#FFFF"
         />
 
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:visibility="gone"
+        android:id="@+id/progress_bar"
+        android:indeterminateTint="@color/blue">
+    </ProgressBar>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -148,7 +160,7 @@
         android:layout_gravity="center"
         android:text="Or sign in with"
         android:textColor="@color/black"
-
+        android:visibility="gone"
         android:gravity="center"></TextView>
 
 
@@ -159,6 +171,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:visibility="gone"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:background="@drawable/sign_in_google"

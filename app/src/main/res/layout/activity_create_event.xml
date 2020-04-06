@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:weightSum="10"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/header"
+            android:textSize="22dp"
+            android:textColor="@color/white"
+            android:text="Add New Post"></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:visibility="gone"
+                    android:background="@drawable/edittext_data_entry"
+                    android:id="@+id/image"></ImageView>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Click to uplaod image"
+                    android:background="@drawable/rounded_btn"
+                    android:textColor="@color/dark_gray"
+                    android:id="@+id/image_load"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"></Button>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Title"></TextView>
+
+                <EditText
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="20dp"
+                    android:background="@drawable/edittext_data_entry"
+                    android:hint="Event Title"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Description"></TextView>
+
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:background="@drawable/edittext_data_entry"
+                    android:hint="Event Description"
+                    android:layout_marginBottom="20dp"
+                    android:ems="3"
+                    android:gravity="start" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Task"></TextView>
+
+                <EditText
+                    android:id="@+id/task"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="20dp"
+                    android:background="@drawable/edittext_data_entry"
+                    android:hint="Enter tasks seperated with ; "
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Learning"></TextView>
+
+                <EditText
+                    android:id="@+id/learning"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="20dp"
+                    android:background="@drawable/edittext_data_entry"
+                    android:hint="Enter tags seperated with ; "
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Start Date"></TextView>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/rounded_btn"
+                    android:id="@+id/start_date"></Button>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="End Date"></TextView>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/rounded_btn"
+                    android:id="@+id/end_date"></Button>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Points"></TextView>
+
+                <EditText
+                    android:id="@+id/point"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="20dp"
+                    android:inputType="number"
+                    android:background="@drawable/edittext_data_entry"
+                    android:hint="Points"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Venue"></TextView>
+
+                <EditText
+                    android:id="@+id/venue"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="20dp"
+                    android:background="@drawable/edittext_data_entry"
+                    android:hint="Event Venue"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Contact Person Name"></TextView>
+
+                <EditText
+                    android:id="@+id/contact_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="20dp"
+                    android:background="@drawable/edittext_data_entry"
+                    android:hint="Contact Person Name"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Contact Person Mobile"></TextView>
+
+                <EditText
+                    android:id="@+id/contact_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="20dp"
+                    android:background="@drawable/edittext_data_entry"
+                    android:hint="Contact Person Name"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Create Event"
+                    android:background="@drawable/rounded_action_btn"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/create"
+                    android:gravity="center"></Button>
+
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:visibility="gone"
+                    android:id="@+id/progress_bar"
+                    android:indeterminateTint="@color/blue">
+                </ProgressBar>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="15dp"
+            android:visibility="gone"
+            android:id="@+id/date"
+            android:background="@color/semi">
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@color/white"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

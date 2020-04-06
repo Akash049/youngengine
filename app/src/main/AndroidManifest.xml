@@ -2,13 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.asc.home">
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality.
-    -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -16,50 +14,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
-        <activity android:name=".Activity.Referral.Referral"
-            android:theme="@style/NoActionBar"
-            ></activity>
-        <activity android:name=".Activity.Redeem.Redeem"
-            android:theme="@style/NoActionBar"
-            />
-        <activity android:name=".Activity.Settings.Settings"
-            android:theme="@style/NoActionBar"
-            />
         <activity
-            android:name=".Activity.Learnings.Learning"
-            android:theme="@style/NoActionBar" />
-        <activity
-            android:name=".Activity.OTPLogin.OTP_Login"
-            android:theme="@style/NoActionBar" />
-        <activity
-            android:name=".Activity.Starting.Starting"
-            android:theme="@style/NoActionBar" />
-        <activity
-            android:name=".Activity.Fragment.Profile"
-            android:theme="@style/NoActionBar" />
-        <activity
-            android:name=".Activity.FAQ.FAQ"
-            android:theme="@style/NoActionBar" />
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
-        <activity
-            android:name=".Activity.Location_Test.Location_Test"
-            android:label="@string/title_activity_location__test" />
-        <activity
-            android:name=".Activity.SignUp.SignUp"
-            android:theme="@style/NoActionBar" />
-        <activity
-            android:name=".Activity.Splash_Screen.Splash"
+            android:name=".Activity.Login.Splash"
+            android:screenOrientation="portrait"
             android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -68,25 +25,73 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.Login.Login_Page"
+            android:name=".Activity.CreateNewEvent"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar"
+            ></activity>
+        <activity
+            android:name=".Activity.Other.Referral"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar"
+            ></activity>
+        <activity android:name=".Activity.Other.Redeem"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar"
+            />
+        <activity android:name=".Activity.Other.Settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar"
+            />
+        <activity
+            android:name=".Activity.Learnings.Learning"
+            android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".Activity.Wallet.Wallet"
+            android:name=".Activity.Login.OTPLogin"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".Activity.Login.IntroductionScreens"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".Activity.Home.DashboardFragments.Profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".Activity.Other.FAQ"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Activity.Login.LoginScreen"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".Activity.Other.Wallet"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Activity.Profile.Profile"
+            android:name=".Activity.Other.Profile"
+            android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".Activity.Social.Social"
+            android:name=".Activity.Other.Social"
+            android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".Activity.Main.Main"
+            android:name=".Activity.Home.Dashboard"
             android:label="@string/app_name"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".Activity.Mission.Mission"
+            android:name=".Activity.Home.Mission"
             android:label="@string/app_name"
             android:theme="@style/NoActionBar" />
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/>
 
         <meta-data
             android:name="preloaded_fonts"
@@ -94,6 +99,7 @@
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
+
     </application>
 
 </manifest>

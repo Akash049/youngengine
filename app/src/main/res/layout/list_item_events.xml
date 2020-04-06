@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardElevation="7dp"
+    app:cardCornerRadius="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/event_card"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@color/mild_gray"
+            android:src="@drawable/preview"
+            android:id="@+id/new_image"
+            android:scaleType="fitXY"></ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:fontFamily="serif"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="MUN In IITD"
+                android:textColor="#636363"
+                android:id="@+id/new_title"
+                ></TextView>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:src="@drawable/coinage"
+                android:layout_gravity="center_vertical"></ImageView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="133"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:fontFamily="serif"
+                android:id="@+id/points"
+                ></TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:fontFamily="serif"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="21st Feb 2020"
+                android:textColor="#A9B5B9"
+                android:id="@+id/new_date"
+                ></TextView>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:src="@drawable/task"
+                android:layout_gravity="center_vertical"></ImageView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="5"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/tasks"
+                android:paddingLeft="5dp"
+                android:fontFamily="serif"></TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

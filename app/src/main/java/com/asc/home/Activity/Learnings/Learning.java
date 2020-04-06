@@ -7,9 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.asc.home.Adapter.LearningsListAdapter;
-import com.asc.home.Adapter.NewListAdapter;
 import com.asc.home.Model.LearningsModel;
-import com.asc.home.Model.NewModel;
 import com.asc.home.R;
 
 import java.util.ArrayList;
